@@ -1,10 +1,15 @@
 .contenedor__cabecera{
-    background-color: #000000;
+    background-color: #0f0f0f;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10rem;
     height: 10rem;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+body{
+    background-color: #282828;
 }
 
 /*----------RESPONSIVE----------MOBILE----------*/

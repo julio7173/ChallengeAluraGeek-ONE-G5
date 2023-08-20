@@ -1,8 +1,8 @@
 .cabecera__barra-busqueda{
     width: 20rem;
-    height: 2rem;
+    height: 2.5rem;
     border-radius: 5rem;
-    font-size: 1rem;
+    font-size: 1.5rem;
     text-align: center;
     border: none;
 }

@@ -1,0 +1,15 @@
+.rodapie__enlaces{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 30%;
+    /*margin-bottom: 15rem;*/
+}
+
+.enlace__somos, .enlace__redes{
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: #e0e7ef;
+}

@@ -2,8 +2,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(151, 117, 74);
-    height: 25rem;
+    background-color: #0000004f;
+    width: 80%;
+    margin: 2rem 10%;
+    border-radius: 1rem;
 }
 
 .tragos__slider{
@@ -16,8 +18,6 @@
 .tragos__item{
     position: absolute;
     width: 500px;
-    height: 400px;
-    height: 400px;
     transition: 0.5s;
     left: calc(50% - 15rem);
     top: 7.5rem;
@@ -29,17 +29,30 @@
 }
 
 #tragoNext, #tragoPrev{
+    width: 5rem;
     position: absolute;
-    top: 50%;
-    color: #fff;
-    background-color: #000;
+    top: 40%;
+    color: chartreuse;
+    background-color: transparent;
     border: none;
-    font-size: xx-large;
+    font-family: 'Concert One', cursive;
+    font-size: 5rem;
     font-weight: bold;
-    left: 5rem;
+    left: -1rem;
+    transition: 1s;
 }
 
 #tragoNext{
     left: unset;
-    right: 5rem;
+    right: -1rem;
+}
+
+#tragoNext:hover{
+    cursor: pointer;
+    transform: translateX(0.5rem);
+}
+
+#tragoPrev:hover{
+    cursor: pointer;
+    transform: translateX(-0.5rem);
 }

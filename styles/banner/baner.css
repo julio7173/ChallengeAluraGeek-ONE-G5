@@ -1,5 +1,9 @@
 .contenedor__banner {
-    background-color: beige;
+    background-color: #0000004f;
+    display: flex;
+    margin: 2rem 10%;
+    border-radius: 1rem;
+    width: 80%;
 }
 
 .banner {
@@ -16,19 +20,31 @@
 
 .prev,
 .next {
-    width: 8rem;
-    height: 3rem;
-    border-radius: 1rem;
-    border-color: white;
-    box-shadow: 10px 8px 15px;
+    background-color: transparent;
+    color: chartreuse;
+    border: none;
     position: absolute;
-    top: 50%;
+    top: 60%;
+    font-family: 'Concert One', cursive;
+    font-size: 5rem;
+    font-weight: bold;
+    transition: 2s;
 }
 
 .prev {
-    left: 9rem;
+    left: 14rem;
 }
 
 .next {
-    right: 9rem;
+    right: 14rem;
+}
+
+.prev:hover{
+    transform: translateX(-1rem);
+    cursor: pointer;
+}
+
+.next:hover{
+    transform: translateX(1rem);
+    cursor: pointer;
 }

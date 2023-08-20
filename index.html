@@ -8,6 +8,8 @@
     <title> Luna Park </title>
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="shortcut icon" href="styles/img/icon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&family=Concert+One&display=swap">
     <link rel="stylesheet" href="styles/cabecera/principal.css">
     <link rel="stylesheet" href="styles/cabecera/logo.css">
     <link rel="stylesheet" href="styles/cabecera/barra.css">
@@ -16,6 +18,11 @@
     <link rel="stylesheet" href="styles/licores/licores.css">
     <link rel="stylesheet" href="styles/tragos/tragos.css">
     <link rel="stylesheet" href="styles/refrescos/refrescos.css">
+    <link rel="stylesheet" href="styles/rodapie/rodapie.css">
+    <link rel="stylesheet" href="styles/rodapie/logo.css">
+    <link rel="stylesheet" href="styles/rodapie/enlaces.css">
+    <link rel="stylesheet" href="styles/rodapie/formulario.css">
+    <link rel="stylesheet" href="styles/pie/pie.css">
 </head>
 
 <body>
@@ -26,8 +33,8 @@
     </header>
     <section class="contenedor__banner">
         <div class="banner"></div>
-        <button class="prev">Anterior</button>
-        <button class="next">Siguiente</button>
+        <button class="prev">&lt</button>
+        <button class="next">&gt</button>
         <script src="/js/banner.js"></script>
     </section>
     <section class="contenedor__licores">
@@ -44,8 +51,8 @@
             <div class="licores__item"><img src="/styles/img/sliders/licores/10.png" alt="Jose Cuervo (normal)" class="licor__img"></div>
             <div class="licores__item"><img src="/styles/img/sliders/licores/11.png" alt="Jose Cuervo (blanco)" class="licor__img"></div>
             <div class="licores__item"><img src="/styles/img/sliders/licores/12.png" alt="Kohlberg Tinto" class="licor__img"></div>
-            <button id="licorNext">></button>
-            <button id="licorPrev"><</button>
+            <button id="licorNext">&gt</button>
+            <button id="licorPrev">&lt</button>
         </div>
         <script src="/js/licores.js"></script>
     </section>
@@ -67,8 +74,8 @@
             <div class="tragos__item"><img src="/styles/img/sliders/tragos/35.png" alt="Orgasmo" class="trago__img"></div>
             <div class="tragos__item"><img src="/styles/img/sliders/tragos/36.png" alt="Margarita Corona (roja)" class="trago__img"></div>
             <div class="tragos__item"><img src="/styles/img/sliders/tragos/37.png" alt="Margarita Corona (azul)" class="trago__img"></div>
-            <button id="tragoNext">></button>
-            <button id="tragoPrev"><</button>
+            <button id="tragoNext">&gt</button>
+            <button id="tragoPrev">&lt</button>
         </div>
         <script src="/js/tragos.js"></script>
     </section>
@@ -83,11 +90,36 @@
             <div class="refrecos__item"><img src="/styles/img/sliders/refrescos/19.png" alt="Vital 600mL" class="refresco__imd"></div>
             <div class="refrecos__item"><img src="/styles/img/sliders/refrescos/20.png" alt="Sprite" class="refresco__imd"></div>
             <div class="refrecos__item"><img src="/styles/img/sliders/refrescos/21.png" alt="Red Bull" class="refresco__imd"></div>
-            <button id="refrescoNext">></button>
-            <button id="refrescoPrev"><</button>
+            <button id="refrescoNext">&gt</button>
+            <button id="refrescoPrev">&lt</button>
         </div>
         <script src="/js/refrescos.js"></script>
     </section>
+    <section class="contenedor__rodapie">
+        <div class="rodapie__logo"><img src="/styles/img/logo.png" alt="Logo Luna Park" class="rodapie__img"></div>
+        <div class="rodapie__enlaces">
+            <a href="#" class="enlace__somos">
+                <p class="quienes__somos"> Quienes somos </p>
+            </a>
+            <a href="#" class="enlace__redes">
+                <p class="redes"> Nuestras redes </p>
+            </a>
+        </div>
+        <div class="rodapie__formulario">
+            <form class="formulario">
+                <h2 class="formulario__titulo"> Hable con nosotros </h2>
+                <input type="text" name="nombre" placeholder="Escribe tu nombre" class="formulario__nombre">
+                <input type="text" name="mesaje" placeholder="Escribe tu mensaje" class="formulario__mensaje">
+                <input type="submit" value="Enviar" class="formulario__boton">
+              </form>
+        </div>
+    </section>
 </body>
+
+<footer>
+    <section class="pie">
+        <h2 class="autor"> Desarrolado por Julio Cesar Severiche Orellana | 2023 </h2>
+    </section>
+</footer>
 
 </html>

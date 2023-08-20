@@ -1,0 +1,37 @@
+.rodapie__formulario{
+    width: 40%;
+    height: 80%;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario__titulo{
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #e0e7ef;
+}
+
+.formulario__nombre, .formulario__mensaje, .formulario__boton{
+    width: 85%;
+    height: 2rem;
+    border-radius: 1rem;
+    padding: 8px;
+    margin-bottom: 1rem;
+    border: none;
+    font-size: 1.2rem;
+}
+
+.formulario__nombre:focus, .formulario__mensaje:focus{
+    outline: none;
+}
+
+.formulario__boton{
+    width: 40%;
+    height: 2.2rem;
+}
