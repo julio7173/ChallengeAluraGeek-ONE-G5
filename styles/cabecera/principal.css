@@ -6,3 +6,11 @@
     gap: 10rem;
     height: 10rem;
 }
+
+/*----------RESPONSIVE----------MOBILE----------*/
+@media only screen and (max-width: 768px) {
+    .contenedor__cabecera{
+        gap: 0;
+        height: 10rem;
+    }
+}

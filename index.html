@@ -2,40 +2,92 @@
 
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> Luna Park </title>
-        <link rel="stylesheet" href="styles/reset.css">
-        <link rel="shortcut icon" href="styles/img/icon.png" type="image/x-icon">
-        <link rel="stylesheet" href="styles/cabecera/principal.css">
-        <link rel="stylesheet" href="styles/cabecera/logo.css">
-        <link rel="stylesheet" href="styles/cabecera/barra.css">
-        <link rel="stylesheet" href="styles/cabecera/boton.css">
-        <link rel="stylesheet" href="styles/banner/baner.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Luna Park </title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="shortcut icon" href="styles/img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/cabecera/principal.css">
+    <link rel="stylesheet" href="styles/cabecera/logo.css">
+    <link rel="stylesheet" href="styles/cabecera/barra.css">
+    <link rel="stylesheet" href="styles/cabecera/boton.css">
+    <link rel="stylesheet" href="styles/banner/baner.css">
+    <link rel="stylesheet" href="styles/licores/licores.css">
+    <link rel="stylesheet" href="styles/tragos/tragos.css">
+    <link rel="stylesheet" href="styles/refrescos/refrescos.css">
+</head>
 
-    <body>
-        <header class="contenedor__cabecera">
-            <img class="cabecera__img" src="styles/img/logo.png" alt="Logo">
-            <input class="cabecera__barra-busqueda" type="text" name="Busqueda" placeholder="Buscar">
-            <button class="cabecera__boton"> Iniciar Sesión </button>
-        </header>
-        <section class="contenedor__banner">
-            <div class="slider-wrapper">
-                <div class="slider">
-                    <img class="banner__img" id="slide-0" src="styles/img/banner-promos/p-intro.png" alt="Banner promociones">
-                    <img class="banner__img" id="slide-1" src="styles/img/banner-promos/p-1.png" alt="Banner promociones jueves">
-                    <img class="banner__img" id="slide-2" src="styles/img/banner-promos/p-2.png" alt="Banner promociones viernes">
-                    <img class="banner__img" id="slide-3" src="styles/img/banner-promos/p-3.png" alt="Banner promociones sabados">
-                </div>
-                <div class="slider-nav">
-                    <a class="navegacion" href="#slide-0"></a>
-                    <a class="navegacion" href="#slide-1"></a>
-                    <a class="navegacion" href="#slide-2"></a>
-                    <a class="navegacion" href="#slide-3"></a>
-                </div>
-            </div>
-        </section>
-    </body>
+<body>
+    <header class="contenedor__cabecera">
+        <img class="cabecera__img" src="styles/img/logo.png" alt="Logo">
+        <input class="cabecera__barra-busqueda" type="text" name="Busqueda" placeholder="Buscar">
+        <button class="cabecera__boton"> Iniciar Sesión </button>
+    </header>
+    <section class="contenedor__banner">
+        <div class="banner"></div>
+        <button class="prev">Anterior</button>
+        <button class="next">Siguiente</button>
+        <script src="/js/banner.js"></script>
+    </section>
+    <section class="contenedor__licores">
+        <div class="licores__slider">
+            <div class="licores__item"><img src="/styles/img/sliders/licores/1.png" alt="Blue Label" class="licor__img"></div>
+            <div class="licores__item"><img src="/styles/img/sliders/licores/2.png" alt="Black Label" class="licor__img"></div>
+            <div class="licores__item"><img src="/styles/img/sliders/licores/3.png" alt="Double Black" class="licor__img"></div>
+            <div class="licores__item"><img src="/styles/img/sliders/licores/4.png" alt="Old Parr" class="licor__img"></div>
+            <div class="licores__item"><img src="/styles/img/sliders/licores/5.png" alt="Red Label" class="licor__img"></div>
+            <div class="licores__item"><img src="/styles/img/sliders/licores/6.png" alt="Jack Daniel's" class="licor__img"></div>
+            <div class="licores__item"><img src="/styles/img/sliders/licores/7.png" alt="Flor de Caña" class="licor__img"></div>
+            <div class="licores__item"><img src="/styles/img/sliders/licores/8.png" alt="Havan Club" class="licor__img"></div>
+            <div class="licores__item"><img src="/styles/img/sliders/licores/9.png" alt="Bacardi Solera" class="licor__img"></div>
+            <div class="licores__item"><img src="/styles/img/sliders/licores/10.png" alt="Jose Cuervo (normal)" class="licor__img"></div>
+            <div class="licores__item"><img src="/styles/img/sliders/licores/11.png" alt="Jose Cuervo (blanco)" class="licor__img"></div>
+            <div class="licores__item"><img src="/styles/img/sliders/licores/12.png" alt="Kohlberg Tinto" class="licor__img"></div>
+            <button id="licorNext">></button>
+            <button id="licorPrev"><</button>
+        </div>
+        <script src="/js/licores.js"></script>
+    </section>
+    <section class="contenedor__tragos">
+        <div class="tragos__slider">
+            <div class="tragos__item"><img src="/styles/img/sliders/tragos/22.png" alt="Pecera Jarra" class="trago__img"></div>
+            <div class="tragos__item"><img src="/styles/img/sliders/tragos/23.png" alt="Mojito Jarra" class="trago__img"></div>
+            <div class="tragos__item"><img src="/styles/img/sliders/tragos/24.png" alt="Daiquiri Fresa" class="trago__img"></div>
+            <div class="tragos__item"><img src="/styles/img/sliders/tragos/25.png" alt="Daiquiri Maracuya" class="trago__img"></div>
+            <div class="tragos__item"><img src="/styles/img/sliders/tragos/26.png" alt="La Pitufina" class="trago__img"></div>
+            <div class="tragos__item"><img src="/styles/img/sliders/tragos/27.png" alt="La Paloma" class="trago__img"></div>
+            <div class="tragos__item"><img src="/styles/img/sliders/tragos/28.png" alt="La Pantera Rosa" class="trago__img"></div>
+            <div class="tragos__item"><img src="/styles/img/sliders/tragos/29.png" alt="El Destornillador" class="trago__img"></div>
+            <div class="tragos__item"><img src="/styles/img/sliders/tragos/30.png" alt="Blue Lagoon" class="trago__img"></div>
+            <div class="tragos__item"><img src="/styles/img/sliders/tragos/31.png" alt="Tequila Sunrise" class="trago__img"></div>
+            <div class="tragos__item"><img src="/styles/img/sliders/tragos/32.png" alt="Mojito de Coco" class="trago__img"></div>
+            <div class="tragos__item"><img src="/styles/img/sliders/tragos/33.png" alt="Sex On The Beach" class="trago__img"></div>
+            <div class="tragos__item"><img src="/styles/img/sliders/tragos/34.png" alt="Piña Colada" class="trago__img"></div>
+            <div class="tragos__item"><img src="/styles/img/sliders/tragos/35.png" alt="Orgasmo" class="trago__img"></div>
+            <div class="tragos__item"><img src="/styles/img/sliders/tragos/36.png" alt="Margarita Corona (roja)" class="trago__img"></div>
+            <div class="tragos__item"><img src="/styles/img/sliders/tragos/37.png" alt="Margarita Corona (azul)" class="trago__img"></div>
+            <button id="tragoNext">></button>
+            <button id="tragoPrev"><</button>
+        </div>
+        <script src="/js/tragos.js"></script>
+    </section>
+    <section class="contenedor__refrecos">
+        <div class="refrescos__slider">
+            <div class="refrecos__item"><img src="/styles/img/sliders/refrescos/13.png" alt="Paceña Macanuda" class="refresco__imd"></div>
+            <div class="refrecos__item"><img src="/styles/img/sliders/refrescos/14.png" alt="Huari" class="refresco__imd"></div>
+            <div class="refrecos__item"><img src="/styles/img/sliders/refrescos/15.png" alt="51 Ice" class="refresco__imd"></div>
+            <div class="refrecos__item"><img src="/styles/img/sliders/refrescos/16.png" alt="Corona" class="refresco__imd"></div>
+            <div class="refrecos__item"><img src="/styles/img/sliders/refrescos/17.png" alt="Coca-Cola" class="refresco__imd"></div>
+            <div class="refrecos__item"><img src="/styles/img/sliders/refrescos/18.png" alt="Vital 2L" class="refresco__imd"></div>
+            <div class="refrecos__item"><img src="/styles/img/sliders/refrescos/19.png" alt="Vital 600mL" class="refresco__imd"></div>
+            <div class="refrecos__item"><img src="/styles/img/sliders/refrescos/20.png" alt="Sprite" class="refresco__imd"></div>
+            <div class="refrecos__item"><img src="/styles/img/sliders/refrescos/21.png" alt="Red Bull" class="refresco__imd"></div>
+            <button id="refrescoNext">></button>
+            <button id="refrescoPrev"><</button>
+        </div>
+        <script src="/js/refrescos.js"></script>
+    </section>
+</body>
+
 </html>
