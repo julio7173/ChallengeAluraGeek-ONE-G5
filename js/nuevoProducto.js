@@ -45,7 +45,7 @@ function showFile(){
         }
         fileReader.readAsDataURL(file);
     }else{
-        alert("This is not an image file");
+        alert("Este archivo no es una imagen");
         dropArea.classList.remove("active");
     }
 }

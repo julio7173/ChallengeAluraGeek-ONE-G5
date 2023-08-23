@@ -1,6 +1,12 @@
 .producto__agregar{
     width: 50%;
     margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.producto__agregar:hover{
+    font-weight: bold;
+    background-color: #f46f52;
 }
 
 /* Portrait and Landscape---------- Mobile */

@@ -22,4 +22,8 @@
     width: 85%;
     background-color: #f46f52;
     color: #e0e7ef;
+    cursor: pointer;
 }
+
+.login__boton:hover{
+    font-weight: bold;

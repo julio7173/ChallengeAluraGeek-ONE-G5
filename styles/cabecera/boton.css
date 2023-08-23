@@ -4,8 +4,11 @@
     border-radius: 5rem;
     font-size: 1.5rem;
     border: none;
+    cursor: pointer;
 }
 
 .cabecera__boton:hover{
-    cursor: pointer;
+    background-color: #f46f52;
+    font-weight: bold;
+    height: 4rem;
 }
