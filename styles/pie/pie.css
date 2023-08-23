@@ -18,3 +18,12 @@
         text-align: center;
     }
 }
+
+/* Portrait and Landscape---------- Tablets */
+@media only screen and (max-device-width: 1024px)  { 
+    .pie{
+        height: 4vh;
+        padding: 1rem;
+        text-align: center;
+    }
+}

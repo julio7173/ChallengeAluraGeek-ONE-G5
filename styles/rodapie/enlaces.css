@@ -21,3 +21,15 @@
         margin: 1rem 0;
     }
 }
+
+/* Portrait and Landscape---------- Tablets */
+@media only screen and (max-device-width: 1024px)  { 
+    .rodapie__enlaces{
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .enlace__somos, .enlace__redes{
+        font-size: 1.5rem;
+    }
+}
