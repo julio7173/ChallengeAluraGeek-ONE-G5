@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Luna Park </title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="shortcut icon" href="styles/img/icon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&family=Concert+One&display=swap">
+    <link rel="stylesheet" href="styles/cabecera/principal.css">
+    <link rel="stylesheet" href="styles/cabecera/logo.css">
+    <link rel="stylesheet" href="styles/cabecera/barra.css">
+    <link rel="stylesheet" href="styles/admin/admin.css">
+    <link rel="stylesheet" href="styles/admin/todos-cabecera.css">
+    <link rel="stylesheet" href="styles/admin/producto.css">
+    <link rel="stylesheet" href="styles/admin/todos-img.css">
+    <link rel="stylesheet" href="styles/rodapie/rodapie.css">
+    <link rel="stylesheet" href="styles/rodapie/logo.css">
+    <link rel="stylesheet" href="styles/rodapie/enlaces.css">
+    <link rel="stylesheet" href="styles/rodapie/formulario.css">
+    <link rel="stylesheet" href="styles/pie/pie.css">
+</head>
+
+<body id="Body__Admin">
+    <header class="contenedor__cabecera">
+        <img class="cabecera__img" src="styles/img/logo.png" alt="Logo">
+        <input class="cabecera__barra-busqueda" type="text" name="Busqueda" placeholder="Buscar">
+    </header>
+    <section class="contenedor__todos-productos">
+        <div class="todos__cabecera">
+            <h2 class="todos__titulo"> Todos los productos </h2>
+            <button class="todos__boton" onclick="agregarProducto(this)" value="nuevo__producto.html"> Agregar nuevos
+                productos </button>
+            <script src="/js/agregar.js"></script>
+        </div>
+        <div class="todos__imagenes">
+            <div class="producto__img">
+                <img src="/styles/img/sliders/licores/1.png" alt="" class="todos__producto">
+                <div class="producto__botones">
+                    <button class="editar__img"></button>
+                    <button class="eliminar__img"></button>
+                </div>
+            </div>
+            <div class="producto__img">
+                <img src="/styles/img/sliders/licores/2.png" alt="" class="todos__producto">
+                <div class="producto__botones">
+                    <button class="editar__img"></button>
+                    <button class="eliminar__img"></button>
+                </div>
+            </div>
+            <div class="producto__img">
+                <img src="/styles/img/sliders/licores/3.png" alt="" class="todos__producto">
+                <div class="producto__botones">
+                    <button class="editar__img"></button>
+                    <button class="eliminar__img"></button>
+                </div>
+            </div>
+            <div class="producto__img">
+                <img src="/styles/img/sliders/licores/4.png" alt="" class="todos__producto">
+                <div class="producto__botones">
+                    <button class="editar__img"></button>
+                    <button class="eliminar__img"></button>
+                </div>
+            </div>
+            <div class="producto__img">
+                <img src="/styles/img/sliders/licores/5.png" alt="" class="todos__producto">
+                <div class="producto__botones">
+                    <button class="editar__img"></button>
+                    <button class="eliminar__img"></button>
+                </div>
+            </div>
+            <div class="producto__img">
+                <img src="/styles/img/sliders/licores/6.png" alt="" class="todos__producto">
+                <div class="producto__botones">
+                    <button class="editar__img"></button>
+                    <button class="eliminar__img"></button>
+                </div>
+            </div>
+            <div class="producto__img">
+                <img src="/styles/img/sliders/licores/7.png" alt="" class="todos__producto">
+                <div class="producto__botones">
+                    <button class="editar__img"></button>
+                    <button class="eliminar__img"></button>
+                </div>
+            </div>
+            <div class="producto__img">
+                <img src="/styles/img/sliders/licores/8.png" alt="" class="todos__producto">
+                <div class="producto__botones">
+                    <button class="editar__img"></button>
+                    <button class="eliminar__img"></button>
+                </div>
+            </div>
+            <div class="producto__img">
+                <img src="/styles/img/sliders/licores/9.png" alt="" class="todos__producto">
+                <div class="producto__botones">
+                    <button class="editar__img"></button>
+                    <button class="eliminar__img"></button>
+                </div>
+            </div>
+            <div class="producto__img">
+                <img src="/styles/img/sliders/licores/10.png" alt="" class="todos__producto">
+                <div class="producto__botones">
+                    <button class="editar__img"></button>
+                    <button class="eliminar__img"></button>
+                </div>
+            </div>
+            <div class="producto__img">
+                <img src="/styles/img/sliders/licores/11.png" alt="" class="todos__producto">
+                <div class="producto__botones">
+                    <button class="editar__img"></button>
+                    <button class="eliminar__img"></button>
+                </div>
+            </div>
+            <div class="producto__img">
+                <img src="/styles/img/sliders/licores/12.png" alt="" class="todos__producto">
+                <div class="producto__botones">
+                    <button class="editar__img"></button>
+                    <button class="eliminar__img"></button>
+                </div>
+            </div>
+            <div class="producto__img">
+                <img src="/styles/img/sliders/tragos/22.png" alt="" class="todos__producto">
+                <div class="producto__botones">
+                    <button class="editar__img"></button>
+                    <button class="eliminar__img"></button>
+                </div>
+            </div>
+            <div class="producto__img">
+                <img src="/styles/img/sliders/tragos/23.png" alt="" class="todos__producto">
+                <div class="producto__botones">
+                    <button class="editar__img"></button>
+                    <button class="eliminar__img"></button>
+                </div>
+            </div>
+            <div class="producto__img">
+                <img src="/styles/img/sliders/tragos/24.png" alt="" class="todos__producto">
+                <div class="producto__botones">
+                    <button class="editar__img"></button>
+                    <button class="eliminar__img"></button>
+                </div>
+            </div>
+            <div class="producto__img">
+                <img src="/styles/img/sliders/tragos/25.png" alt="" class="todos__producto">
+                <div class="producto__botones">
+                    <button class="editar__img"></button>
+                    <button class="eliminar__img"></button>
+                </div>
+            </div>
+            <div class="producto__img">
+                <img src="/styles/img/sliders/tragos/26.png" alt="" class="todos__producto">
+                <div class="producto__botones">
+                    <button class="editar__img"></button>
+                    <button class="eliminar__img"></button>
+                </div>
+            </div>
+            <div class="producto__img">
+                <img src="/styles/img/sliders/tragos/27.png" alt="" class="todos__producto">
+                <div class="producto__botones">
+                    <button class="editar__img"></button>
+                    <button class="eliminar__img"></button>
+                </div>
+            </div>
+            <div class="producto__img">
+                <img src="/styles/img/sliders/tragos/28.png" alt="" class="todos__producto">
+                <div class="producto__botones">
+                    <button class="editar__img"></button>
+                    <button class="eliminar__img"></button>
+                </div>
+            </div>
+            <div class="producto__img">
+                <img src="/styles/img/sliders/tragos/29.png" alt="" class="todos__producto">
+                <div class="producto__botones">
+                    <button class="editar__img"></button>
+                    <button class="eliminar__img"></button>
+                </div>
+            </div>
+            <div class="producto__img">
+                <img src="/styles/img/sliders/tragos/30.png" alt="" class="todos__producto">
+                <div class="producto__botones">
+                    <button class="editar__img"></button>
+                    <button class="eliminar__img"></button>
+                </div>
+            </div>
+            <div class="producto__img">
+                <img src="/styles/img/sliders/tragos/31.png" alt="" class="todos__producto">
+                <div class="producto__botones">
+                    <button class="editar__img"></button>
+                    <button class="eliminar__img"></button>
+                </div>
+            </div>
+            <div class="producto__img">
+                <img src="/styles/img/sliders/tragos/32.png" alt="" class="todos__producto">
+                <div class="producto__botones">
+                    <button class="editar__img"></button>
+                    <button class="eliminar__img"></button>
+                </div>
+            </div>
+            <div class="producto__img">
+                <img src="/styles/img/sliders/tragos/33.png" alt="" class="todos__producto">
+                <div class="producto__botones">
+                    <button class="editar__img"></button>
+                    <button class="eliminar__img"></button>
+                </div>
+            </div>
+            <div class="producto__img">
+                <img src="/styles/img/sliders/tragos/34.png" alt="" class="todos__producto">
+                <div class="producto__botones">
+                    <button class="editar__img"></button>
+                    <button class="eliminar__img"></button>
+                </div>
+            </div>
+            <div class="producto__img">
+                <img src="/styles/img/sliders/tragos/35.png" alt="" class="todos__producto">
+                <div class="producto__botones">
+                    <button class="editar__img"></button>
+                    <button class="eliminar__img"></button>
+                </div>
+            </div>
+            <div class="producto__img">
+                <img src="/styles/img/sliders/tragos/36.png" alt="" class="todos__producto">
+                <div class="producto__botones">
+                    <button class="editar__img"></button>
+                    <button class="eliminar__img"></button>
+                </div>
+            </div>
+            <div class="producto__img">
+                <img src="/styles/img/sliders/tragos/37.png" alt="" class="todos__producto">
+                <div class="producto__botones">
+                    <button class="editar__img"></button>
+                    <button class="eliminar__img"></button>
+                </div>
+            </div>
+            <div class="producto__img">
+                <img src="/styles/img/sliders/refrescos/13.png" alt="" class="todos__producto">
+                <div class="producto__botones">
+                    <button class="editar__img"></button>
+                    <button class="eliminar__img"></button>
+                </div>
+            </div>
+            <div class="producto__img">
+                <img src="/styles/img/sliders/refrescos/14.png" alt="" class="todos__producto">
+                <div class="producto__botones">
+                    <button class="editar__img"></button>
+                    <button class="eliminar__img"></button>
+                </div>
+            </div>
+            <div class="producto__img">
+                <img src="/styles/img/sliders/refrescos/15.png" alt="" class="todos__producto">
+                <div class="producto__botones">
+                    <button class="editar__img"></button>
+                    <button class="eliminar__img"></button>
+                </div>
+            </div>
+            <div class="producto__img">
+                <img src="/styles/img/sliders/refrescos/16.png" alt="" class="todos__producto">
+                <div class="producto__botones">
+                    <button class="editar__img"></button>
+                    <button class="eliminar__img"></button>
+                </div>
+            </div>
+            <div class="producto__img">
+                <img src="/styles/img/sliders/refrescos/17.png" alt="" class="todos__producto">
+                <div class="producto__botones">
+                    <button class="editar__img"></button>
+                    <button class="eliminar__img"></button>
+                </div>
+            </div>
+            <div class="producto__img">
+                <img src="/styles/img/sliders/refrescos/18.png" alt="" class="todos__producto">
+                <div class="producto__botones">
+                    <button class="editar__img"></button>
+                    <button class="eliminar__img"></button>
+                </div>
+            </div>
+            <div class="producto__img">
+                <img src="/styles/img/sliders/refrescos/19.png" alt="" class="todos__producto">
+                <div class="producto__botones">
+                    <button class="editar__img"></button>
+                    <button class="eliminar__img"></button>
+                </div>
+            </div>
+            <div class="producto__img">
+                <img src="/styles/img/sliders/refrescos/20.png" alt="" class="todos__producto">
+                <div class="producto__botones">
+                    <button class="editar__img"></button>
+                    <button class="eliminar__img"></button>
+                </div>
+            </div>
+            <div class="producto__img">
+                <img src="/styles/img/sliders/refrescos/21.png" alt="" class="todos__producto">
+                <div class="producto__botones">
+                    <button class="editar__img"></button>
+                    <button class="eliminar__img"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contenedor__rodapie">
+        <div class="rodapie__logo"><img src="/styles/img/logo.png" alt="Logo Luna Park" class="rodapie__img"></div>
+        <div class="rodapie__enlaces">
+            <a href="#" class="enlace__somos">
+                <p class="quienes__somos"> Quienes somos </p>
+            </a>
+            <a href="#" class="enlace__redes">
+                <p class="redes"> Nuestras redes </p>
+            </a>
+        </div>
+        <div class="rodapie__formulario">
+            <form class="formulario">
+                <h2 class="formulario__titulo"> Hable con nosotros </h2>
+                <input type="text" name="nombre" placeholder="Escribe tu nombre" class="formulario__nombre">
+                <input type="text" name="mesaje" placeholder="Escribe tu mensaje" class="formulario__mensaje">
+                <input type="submit" value="Enviar" class="formulario__boton">
+            </form>
+        </div>
+    </section>
+</body>
+<footer>
+    <section class="pie">
+        <h2 class="autor"> Desarrollado por Julio Cesar Severiche Orellana | 2023 </h2>
+    </section>
+</footer>
+
+</html>

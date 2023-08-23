@@ -1,0 +1,49 @@
+.todos__cabecera{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 5%;
+    /*background-color: chocolate;*/
+    border-radius: 1rem;
+}
+
+.todos__titulo{
+    font-size: 3rem;
+    font-weight: bold;
+    color: forestgreen;;
+}
+
+.todos__boton{
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 2rem;
+    height: 50%;
+    font-weight: bold;
+    background-color: black;
+    color: chartreuse;
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.todos__boton:hover{
+    background-color: chartreuse;
+    color: black;
+}
+
+/* Portrait and Landscape---------- Mobile */
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px){ 
+    .todos__cabecera{
+        flex-direction: column;
+        height: 2%;
+    }
+    
+    .todos__titulo{
+        font-size: 2rem;
+    }
+    
+    .todos__boton{
+        font-size: 2rem;
+        height: 50%;
+        width: 80%;
+    }
+}

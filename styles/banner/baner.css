@@ -50,7 +50,7 @@
 }
 
 /* Portrait and Landscape---------- Mobile */
-@media only screen and (max-device-width: 768px) { 
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px){ 
     .contenedor__banner {
         margin: 2rem 1%;
         width: 98%;
@@ -79,7 +79,7 @@
 }
 
 /* Portrait and Landscape---------- Tablets */
-@media only screen and (max-device-width: 1024px)  { 
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px){ 
     .prev,
     .next {
         top: 65%;

@@ -7,12 +7,12 @@
     font-family: 'Be Vietnam Pro', sans-serif;
 }
 
-#Body__Index, #Body__Login, #Body__Producto{
+#Body__Index, #Body__Login, #Body__Producto, #Body__Admin{
     background-color: #282828;
 }
 
 /* Portrait and Landscape---------- Mobile */
-@media only screen and (max-device-width: 768px)  { 
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px){ 
     .contenedor__cabecera{
         flex-direction: column;
         height: 30rem;
@@ -20,7 +20,7 @@
 }
 
 /* Portrait and Landscape---------- Tablets */
-@media only screen and (max-device-width: 1024px)  { 
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px){ 
     .contenedor__cabecera{
         flex-direction: row;
         height: 15rem;

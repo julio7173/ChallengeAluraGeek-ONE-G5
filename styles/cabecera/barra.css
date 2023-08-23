@@ -12,15 +12,15 @@
 }
 
 /* Portrait and Landscape---------- Mobile */
-@media only screen and (max-device-width: 768px)  { 
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px){ 
     .cabecera__barra-busqueda{
         width: 60%;
-        height: 10vh;
+        height: 7vh;
     }
 }
 
 /* Portrait and Landscape---------- Tablets */
-@media only screen and (max-device-width: 1024px)  { 
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px){ 
     .cabecera__barra-busqueda{
         width: 30%;
         height: 3rem;
