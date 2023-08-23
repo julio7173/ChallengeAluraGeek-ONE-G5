@@ -1,13 +1,28 @@
 .contenedor__cabecera{
     background-color: #0f0f0f;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    gap: 10rem;
     height: 10rem;
     font-family: 'Be Vietnam Pro', sans-serif;
 }
 
 #Body__Index, #Body__Login, #Body__Producto{
     background-color: #282828;
+}
+
+/* Portrait and Landscape---------- Mobile */
+@media only screen and (max-device-width: 768px)  { 
+    .contenedor__cabecera{
+        flex-direction: column;
+        height: 30rem;
+    }
+}
+
+/* Portrait and Landscape---------- Tablets */
+@media only screen and (max-device-width: 1024px)  { 
+    .contenedor__cabecera{
+        flex-direction: row;
+        height: 15rem;
+    }
 }

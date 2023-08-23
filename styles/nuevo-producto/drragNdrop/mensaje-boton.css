@@ -15,3 +15,14 @@
     font-weight: bold;
     cursor: pointer;
 }
+
+/* Portrait and Landscape---------- Mobile */
+@media only screen and (max-device-width: 768px)  { 
+    .producto__mensaje-1, .producto__mensaje-2{
+        text-align: center;
+    }
+    
+    .producto__boton-1{
+        width: 60%;
+    }
+}

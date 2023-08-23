@@ -2,3 +2,10 @@
     width: 50%;
     margin-bottom: 1rem;
 }
+
+/* Portrait and Landscape---------- Mobile */
+@media only screen and (max-device-width: 768px)  { 
+    .producto__agregar{
+        width: 80%;
+    }
+}

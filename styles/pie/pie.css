@@ -10,3 +10,11 @@
 .autor{
     color: white;
 }
+
+/* Portrait and Landscape---------- Mobile */
+@media only screen and (max-device-width: 768px)  { 
+    .pie{
+        padding: 1rem;
+        text-align: center;
+    }
+}

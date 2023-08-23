@@ -5,3 +5,10 @@
     font-weight: bold;
     margin: 1rem;
 }
+
+/* Portrait and Landscape---------- Mobile */
+@media only screen and (max-device-width: 768px)  { 
+    .prodcuto__titulo{
+        text-align: center;
+    }
+}

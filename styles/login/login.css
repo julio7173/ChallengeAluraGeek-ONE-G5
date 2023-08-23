@@ -19,3 +19,16 @@
     width: 50%;
     font-family: 'Be Vietnam Pro', sans-serif;
 }
+
+/* Portrait and Landscape---------- Mobile */
+@media only screen and (max-device-width: 768px)  { 
+    .contenedor__login{
+        width: 90%;
+        height: 50vh;
+        margin: 2rem 5%;
+    }
+    
+    .login__formulario{
+        width: 90%;
+    }
+}

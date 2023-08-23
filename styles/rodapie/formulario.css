@@ -35,3 +35,11 @@
     width: 40%;
     height: 2.2rem;
 }
+
+/* Portrait and Landscape---------- Mobile */
+@media only screen and (max-device-width: 768px)  { 
+    .rodapie__formulario{
+        width: 100%;
+        margin-top: 2rem;
+    }
+}

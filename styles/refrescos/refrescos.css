@@ -56,3 +56,60 @@
     cursor: pointer;
     transform: translateX(-0.5rem);
 }
+
+/* Portrait and Landscape---------- Mobile */
+@media only screen and (max-device-width: 768px)  { 
+    .contenedor__refrecos{
+        width: 98%;
+        height: 40vh;
+        margin: 2rem 1%;
+    }
+    
+    .refrecos__item{
+        width: 90%;
+        left: calc(50% - 8rem);
+        top: 8rem;
+    }
+    
+    .refresco__imd{
+        width: 80%;
+    }
+    
+    #refrescoNext, #refrescoPrev{
+        top: 60%;
+        left: 2rem;
+    }
+    
+    #refrescoNext{
+        left: unset;
+        right: 2rem;
+    }
+}
+
+/* Portrait and Landscape---------- Tablets */
+@media only screen and (max-device-width: 1024px)  { 
+    .contenedor__refrecos{
+        height: 50vh;
+    }
+
+    .refrecos__item{
+        width: 85%;
+        left: calc(50% - 17rem);
+        top: 4rem;
+    }
+    
+    .refresco__imd{
+        width: 85%;
+    }
+    
+    #refrescoNext, #refrescoPrev{
+        top: 70%;
+        font-size: 8rem;
+        left: 2rem;
+    }
+    
+    #refrescoNext{
+        left: unset;
+        right: 2rem;
+    }
+}

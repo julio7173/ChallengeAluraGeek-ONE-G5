@@ -10,3 +10,19 @@
 .cabecera__barra-busqueda:focus{
     outline: none;
 }
+
+/* Portrait and Landscape---------- Mobile */
+@media only screen and (max-device-width: 768px)  { 
+    .cabecera__barra-busqueda{
+        width: 60%;
+        height: 10vh;
+    }
+}
+
+/* Portrait and Landscape---------- Tablets */
+@media only screen and (max-device-width: 1024px)  { 
+    .cabecera__barra-busqueda{
+        width: 30%;
+        height: 3rem;
+    }
+}

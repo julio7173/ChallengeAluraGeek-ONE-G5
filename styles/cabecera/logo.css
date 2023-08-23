@@ -2,3 +2,17 @@
     width: 12rem;
     height: 8rem;
 }
+
+/* Portrait and Landscape---------- Mobile */
+@media only screen and (max-device-width: 768px)  { 
+    .cabecera__img{
+        width: 50%;
+    }
+}
+
+/* Portrait and Landscape---------- Tablets */
+@media only screen and (max-device-width: 1024px)  { 
+    .cabecera__img{
+        width: 20%;
+    }
+}

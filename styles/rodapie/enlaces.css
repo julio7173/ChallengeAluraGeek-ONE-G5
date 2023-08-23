@@ -13,3 +13,11 @@
     font-size: 1.3rem;
     color: #e0e7ef;
 }
+
+/* Portrait and Landscape---------- Mobile */
+@media only screen and (max-device-width: 768px)  { 
+    .rodapie__enlaces{
+        width: 50%;
+        margin: 1rem 0;
+    }
+}

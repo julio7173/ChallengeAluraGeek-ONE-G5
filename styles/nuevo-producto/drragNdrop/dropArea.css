@@ -19,3 +19,15 @@
 .upload{
     width: 10%;
 }
+
+/* Portrait and Landscape---------- Mobile */
+@media only screen and (max-device-width: 768px)  { 
+    .dragNdrop__area{
+        width: 90%;
+        height: 30vh;
+    }
+    
+    .upload{
+        width: 15%;
+    }
+}

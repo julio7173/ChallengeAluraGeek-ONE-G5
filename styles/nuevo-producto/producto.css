@@ -12,3 +12,11 @@
     margin: 2rem 10%;
     border-radius: 1rem;
 }
+
+/* Portrait and Landscape---------- Mobile */
+@media only screen and (max-device-width: 768px)  { 
+    .nuevo__producto{
+        width: 90%;
+        margin: 2rem 5%;
+    }
+}

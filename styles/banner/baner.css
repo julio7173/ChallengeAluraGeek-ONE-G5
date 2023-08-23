@@ -48,3 +48,41 @@
     transform: translateX(1rem);
     cursor: pointer;
 }
+
+/* Portrait and Landscape---------- Mobile */
+@media only screen and (max-device-width: 768px) { 
+    .contenedor__banner {
+        margin: 2rem 1%;
+        width: 98%;
+        height: 50vh;
+    }
+    
+    .banner {
+        display: flex;
+        margin: 1rem 3%;
+        width: 94%;
+        height: 35vh;
+    }
+    
+    .prev,
+    .next {
+        top: 105%;
+    }
+    
+    .prev {
+        left: 10%;
+    }
+    
+    .next {
+        right: 10%;
+    }
+}
+
+/* Portrait and Landscape---------- Tablets */
+@media only screen and (max-device-width: 1024px)  { 
+    .prev,
+    .next {
+        top: 65%;
+        font-size: 8rem;
+    }
+}

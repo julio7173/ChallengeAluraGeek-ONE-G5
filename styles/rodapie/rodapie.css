@@ -7,3 +7,11 @@
     height: 50vh;
     font-family: 'Be Vietnam Pro', sans-serif;
 }
+
+/* Portrait and Landscape---------- Mobile */
+@media only screen and (max-device-width: 768px)  { 
+    .contenedor__rodapie{
+        flex-direction: column;
+        height: 80vh;
+    }
+}
