@@ -1,0 +1,25 @@
+.login__titulo{
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.login__titulo{
+    color: #e0e7ef;
+}
+
+.login__email, .login__password, .login__boton{
+    font-size: 1.2rem;
+    border-radius: 1rem;
+    border: none;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    width: 80%;
+}
+
+.login__boton{
+    width: 85%;
+    background-color: #f46f52;
+    color: #e0e7ef;
+}

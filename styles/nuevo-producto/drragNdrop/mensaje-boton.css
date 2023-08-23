@@ -1,0 +1,17 @@
+.producto__mensaje-1, .producto__mensaje-2{
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.producto__boton-1{
+    width: 40%;
+    height: 8vh;
+    border-radius: 1rem;
+    font-size: 1rem;
+    background-color: black;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}

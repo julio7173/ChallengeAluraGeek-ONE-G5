@@ -1,0 +1,14 @@
+.nuevo__producto, .dragNdrop__area{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+.nuevo__producto{
+    width: 80%;
+    background-color: #0371711a;
+    margin: 2rem 10%;
+    border-radius: 1rem;
+}

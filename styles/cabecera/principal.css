@@ -8,14 +8,6 @@
     font-family: 'Be Vietnam Pro', sans-serif;
 }
 
-body{
+#Body__Index, #Body__Login, #Body__Producto{
     background-color: #282828;
-}
-
-/*----------RESPONSIVE----------MOBILE----------*/
-@media only screen and (max-width: 768px) {
-    .contenedor__cabecera{
-        gap: 0;
-        height: 10rem;
-    }
 }

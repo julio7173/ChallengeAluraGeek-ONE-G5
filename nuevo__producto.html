@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Luna Park </title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="shortcut icon" href="styles/img/icon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&family=Concert+One&display=swap">
+    <link rel="stylesheet" href="styles/cabecera/principal.css">
+    <link rel="stylesheet" href="styles/cabecera/logo.css">
+    <link rel="stylesheet" href="styles/cabecera/barra.css">
+    <link rel="stylesheet" href="styles/nuevo-producto/producto.css">
+    <link rel="stylesheet" href="styles/nuevo-producto/titulo.css">
+    <link rel="stylesheet" href="styles/nuevo-producto/drragNdrop/dropArea.css">
+    <link rel="stylesheet" href="styles/nuevo-producto/drragNdrop/mensaje-boton.css">
+    <link rel="stylesheet" href="styles/nuevo-producto/form-producto/formularioP.css">
+    <link rel="stylesheet" href="styles/nuevo-producto/form-producto/agregar.css">
+    <link rel="stylesheet" href="styles/rodapie/rodapie.css">
+    <link rel="stylesheet" href="styles/rodapie/logo.css">
+    <link rel="stylesheet" href="styles/rodapie/enlaces.css">
+    <link rel="stylesheet" href="styles/rodapie/formulario.css">
+    <link rel="stylesheet" href="styles/pie/pie.css">
+</head>
+
+<body id="Body__Producto">
+    <header class="contenedor__cabecera">
+        <img class="cabecera__img" src="styles/img/logo.png" alt="Logo">
+        <input class="cabecera__barra-busqueda" type="text" name="Busqueda" placeholder="Buscar">
+    </header>
+    <section class="nuevo__producto">
+        <h2 class="prodcuto__titulo"> Agregar nuevo producto </h2>
+        <div class="dragNdrop__area">
+            <img src="/styles/img/upload-icon.svg" alt="Upload Icon" class="upload">
+            <h2 class="producto__mensaje-1"> Arrastra y suelta para cargar la imagen </h2>
+            <span class="producto__mensaje-2"> O </span>
+            <button class="producto__boton-1"> Busca la imagen </button>
+            <input type="file" hidden class="producto__boton-2">
+        </div>
+        <form class="formulario__producto">
+            <input type="text" class="producto__categoria" placeholder="Categoria del producto">
+            <input type="text" class="producto__nombre" placeholder="Nombre del producto">
+            <input type="number" class="producto__precio" placeholder="Precio del producto">
+            <input type="submit" class="producto__agregar" value="Agregar producto">
+        </form>
+        <script src="/js/nuevoProducto.js"></script>
+    </section>
+    <section class="contenedor__rodapie">
+        <div class="rodapie__logo"><img src="/styles/img/logo.png" alt="Logo Luna Park" class="rodapie__img"></div>
+        <div class="rodapie__enlaces">
+            <a href="#" class="enlace__somos">
+                <p class="quienes__somos"> Quienes somos </p>
+            </a>
+            <a href="#" class="enlace__redes">
+                <p class="redes"> Nuestras redes </p>
+            </a>
+        </div>
+        <div class="rodapie__formulario">
+            <form class="formulario">
+                <h2 class="formulario__titulo"> Hable con nosotros </h2>
+                <input type="text" name="nombre" placeholder="Escribe tu nombre" class="formulario__nombre">
+                <input type="text" name="mesaje" placeholder="Escribe tu mensaje" class="formulario__mensaje">
+                <input type="submit" value="Enviar" class="formulario__boton">
+            </form>
+        </div>
+    </section>
+</body>
+<footer>
+    <section class="pie">
+        <h2 class="autor"> Desarrolado por Julio Cesar Severiche Orellana | 2023 </h2>
+    </section>
+</footer>
+
+</html>
