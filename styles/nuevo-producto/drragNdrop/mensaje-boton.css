@@ -16,6 +16,12 @@
     cursor: pointer;
 }
 
+.error-imagen{
+    color: #e0e7ef;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
 /* Portrait and Landscape---------- Mobile */
 @media only screen and (min-device-width: 320px) and (max-device-width: 768px){ 
     .producto__mensaje-1, .producto__mensaje-2{
