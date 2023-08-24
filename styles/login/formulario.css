@@ -18,6 +18,11 @@
     width: 80%;
 }
 
+.error{
+    color: #e0e7ef;
+    margin-bottom: 1rem;
+}
+
 .login__boton{
     width: 85%;
     background-color: #f46f52;

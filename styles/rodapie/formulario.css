@@ -10,6 +10,12 @@
     align-items: center;
 }
 
+/* Seleccionar los elementos li que contienen los mensajes de error */
+.formulario__errores li {
+    color: #e0e7ef;
+    margin-bottom: 1rem;
+  }
+
 .formulario__titulo{
     margin-bottom: 1rem;
     font-size: 1.4rem;
