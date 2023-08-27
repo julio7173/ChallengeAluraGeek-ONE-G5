@@ -1,4 +1,4 @@
-.prodcuto__titulo{
+.producto__titulo{
     font-family: 'Be Vietnam Pro', sans-serif;
     color: #fff;
     font-size: 2rem;
@@ -8,7 +8,8 @@
 
 /* Portrait and Landscape---------- Mobile */
 @media only screen and (min-device-width: 320px) and (max-device-width: 768px){ 
-    .prodcuto__titulo{
+    .producto__titulo{
         text-align: center;
+        font-size: 2.5rem;
     }
 }

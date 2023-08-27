@@ -1,8 +1,8 @@
-// Seleccionar los elementos del formulario
-var formulario = document.querySelector(".formulario");
-var nombre = document.querySelector(".formulario__nombre");
-var mensaje = document.querySelector(".formulario__mensaje");
-var boton = document.querySelector(".formulario__boton");
+
+let formulario = document.querySelector(".formulario");
+let nombre = document.querySelector(".formulario__nombre");
+let mensaje = document.querySelector(".formulario__mensaje");
+let boton = document.querySelector(".formulario__boton");
 
 // Agregar un evento de submit al formulario
 formulario.addEventListener("submit", function (event) {
@@ -11,7 +11,7 @@ formulario.addEventListener("submit", function (event) {
   // Limpiar los posibles mensajes de error anteriores
   limpiarErrores();
   // Validar los campos del formulario
-  var errores = validarCampos(nombre.value, mensaje.value);
+  let errores = validarCampos(nombre.value, mensaje.value);
   // Si hay errores, mostrarlos al usuario
   if (errores.length > 0) {
     mostrarErrores(errores);
@@ -23,7 +23,7 @@ formulario.addEventListener("submit", function (event) {
 
 // Función que valida los campos del formulario y devuelve un array de errores
 function validarCampos(nombre, mensaje) {
-  var errores = [];
+  let errores = [];
   // Validar que el nombre no esté vacío y tenga máximo 40 caracteres
   if (nombre.trim() == "") {
     errores.push("El nombre no puede estar vacío");
@@ -42,11 +42,11 @@ function validarCampos(nombre, mensaje) {
 // Función que muestra los mensajes de error al usuario
 function mostrarErrores(errores) {
   // Crear un elemento ul para contener los mensajes de error
-  var ul = document.createElement("ul");
+  let ul = document.createElement("ul");
   ul.className = "formulario__errores";
   // Recorrer el array de errores y crear un elemento li por cada uno
-  for (var i = 0; i < errores.length; i++) {
-    var li = document.createElement("li");
+  for (let i = 0; i < errores.length; i++) {
+    let li = document.createElement("li");
     li.textContent = errores[i];
     ul.appendChild(li);
   }
@@ -57,7 +57,7 @@ function mostrarErrores(errores) {
 // Función que limpia los mensajes de error anteriores
 function limpiarErrores() {
   // Seleccionar el elemento ul que contiene los mensajes de error
-  var ul = document.querySelector(".formulario__errores");
+  let ul = document.querySelector(".formulario__errores");
   // Si existe, eliminarlo del formulario
   if (ul) {
     formulario.removeChild(ul);

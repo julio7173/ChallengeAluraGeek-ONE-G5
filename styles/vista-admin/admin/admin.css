@@ -4,7 +4,7 @@
     justify-content: center;
     font-family: 'Be Vietnam Pro', sans-serif;
     width: 80%;
-    height: 650vh;
+    height: 100%;
     margin: 1rem 10%;
     background-color: #0000005e;
     border-radius: 1rem;
@@ -14,7 +14,7 @@
 @media only screen and (min-device-width: 320px) and (max-device-width: 768px){ 
     .contenedor__todos-productos{
         width: 95%;
-        height: 1400vh;
+        height: 100%;
         margin: 1rem 2.5%;
     }
 }

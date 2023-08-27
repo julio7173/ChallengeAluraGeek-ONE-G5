@@ -1,15 +1,15 @@
-.producto__img{
+.producto__img-admin{
     width: 30%;
     display: flex;
     flex-direction: column;
 }
 
-.producto__botones{
+.producto__botones-admin{
     display: flex;
     justify-content: space-evenly;
 }
 
-.editar__img, .eliminar__img{
+.editar__img-admin, .eliminar__img-admin{
     background-position: center;
     background-repeat: no-repeat;
     border: none;
@@ -20,23 +20,23 @@
     margin-top: 1rem;
 }
 
-.editar__img{
+.editar__img-admin{
     background-image: url(/styles/img/edit-icon.svg);
     background-size: 100% 70%;
 }
 
-.eliminar__img{
+.eliminar__img-admin{
     background-image: url(/styles/img/delete-icon.svg);
     background-size: 100% 80%;
 }
 
-.editar__img:hover, .eliminar__img:hover{
+.editar__img-admin:hover, .eliminar__img-admin:hover{
     background-color: chartreuse;
 }
 
 /* Portrait and Landscape---------- Mobile */
 @media only screen and (min-device-width: 320px) and (max-device-width: 768px){ 
-    .producto__img{
+    .producto__img-admin{
         width: 90%;
         display: flex;
         flex-direction: column;

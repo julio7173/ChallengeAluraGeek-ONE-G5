@@ -65,7 +65,7 @@ function showFile() {
             // Mostrar la URL en la consola del navegador (opcional)
             console.log(fileURL);
             // Crear una etiqueta <img> con la clase producto__img y el atributo src igual a la URL del archivo
-            let imgTag = `<img src="${fileURL}" class="producto__img">`;
+            let imgTag = `<img src="${fileURL}" class="producto__img-dropArea">`;
             // Insertar la etiqueta <img> en el elemento dropArea, reemplazando su contenido anterior
             dropArea.innerHTML = imgTag;
         }

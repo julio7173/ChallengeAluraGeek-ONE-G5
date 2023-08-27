@@ -3,8 +3,8 @@
     justify-content: space-around;
     align-items: center;
     height: 5%;
-    /*background-color: chocolate;*/
     border-radius: 1rem;
+    margin: 2rem;
 }
 
 .todos__titulo{
@@ -34,11 +34,13 @@
 @media only screen and (min-device-width: 320px) and (max-device-width: 768px){ 
     .todos__cabecera{
         flex-direction: column;
-        height: 2%;
+        height: 5%;
     }
     
     .todos__titulo{
-        font-size: 2rem;
+        text-align: center;
+        font-size: 2.5rem;
+        margin: 1rem;
     }
     
     .todos__boton{

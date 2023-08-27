@@ -3,9 +3,6 @@
     text-align: center;
     margin-top: 2rem;
     margin-bottom: 2rem;
-}
-
-.login__titulo{
     color: #e0e7ef;
 }
 
@@ -32,3 +29,19 @@
 
 .login__boton:hover{
     font-weight: bold;
+}
+
+/* Portrait and Landscape---------- Mobile */
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px){ 
+    .login__titulo{
+        font-size: 2.5rem;
+    }
+    
+    .login__email, .login__password, .login__boton{
+        font-size: 1.5rem;
+    }
+    
+    .login__boton{
+        text-wrap: wrap;
+    }
+}

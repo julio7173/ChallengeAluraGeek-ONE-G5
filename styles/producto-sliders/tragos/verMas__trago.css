@@ -1,0 +1,15 @@
+.verMas__trago {
+    background-color: #000000;
+    border-radius: 1rem;
+    padding: 1rem;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    height: 10rem;
+    color: #eff4fa;
+    display: none;
+}
+
+.trago__nombre,
+.trago__precio,
+.trago__descripcion {
+    font-size: 1.5rem;
+}

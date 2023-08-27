@@ -48,7 +48,7 @@ licorShow();
 // Esto hace que la imagen del carrusel cambie a la siguiente
 nextLicor.onclick = function(){
     activeLicor = activeLicor + 1 < itemsLicor.length ? activeLicor + 1 : activeLicor;
-    loadlicorShowShow();
+    licorShow();
 }
 
 // Esto hace que la imagen del carrusel cambie a la anterior

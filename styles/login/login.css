@@ -23,12 +23,13 @@
 /* Portrait and Landscape---------- Mobile */
 @media only screen and (min-device-width: 320px) and (max-device-width: 768px){ 
     .contenedor__login{
-        width: 90%;
-        height: 50vh;
-        margin: 2rem 5%;
+        width: 95%;
+        height: 35rem;
+        margin: 2rem 2.5%;
     }
     
     .login__formulario{
         width: 90%;
+        height: 30rem;
     }
 }

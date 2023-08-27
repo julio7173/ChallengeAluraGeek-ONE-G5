@@ -14,6 +14,7 @@
 .formulario__errores li {
     color: #e0e7ef;
     margin-bottom: 1rem;
+    font-size: 1rem;
   }
 
 .formulario__titulo{
@@ -53,5 +54,14 @@
     .rodapie__formulario{
         width: 100%;
         margin-top: 2rem;
+    }
+
+    .formulario__titulo{
+        font-size: 2rem;
+    }
+
+    .formulario__nombre, .formulario__mensaje, .formulario__boton{
+        font-size: 1.6rem;
+        height: 3rem;
     }
 }

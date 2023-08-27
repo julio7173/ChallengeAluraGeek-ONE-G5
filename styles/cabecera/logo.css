@@ -6,7 +6,8 @@
 /* Portrait and Landscape---------- Mobile */
 @media only screen and (min-device-width: 320px) and (max-device-width: 768px){ 
     .cabecera__img{
-        width: 50%;
+        width: 80%;
+        height: 10rem;
     }
 }
 

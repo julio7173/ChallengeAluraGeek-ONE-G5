@@ -11,7 +11,7 @@
 .licores__slider{
     position: relative;
     width: 100%;
-    height: 500px;
+    height: 30rem;
     overflow: hidden;
 }
 
@@ -26,6 +26,7 @@
 .licor__img{
     width: 100%;
     border-radius: 1rem;
+    cursor: pointer;
 }
 
 #licorNext, #licorPrev{
@@ -61,22 +62,23 @@
 @media only screen and (min-device-width: 320px) and (max-device-width: 768px){ 
     .contenedor__licores{
         width: 98%;
-        height: 40vh;
-        margin: 2rem 1%;
+        height: 25rem;
+        margin: 2rem 1% 4rem 1%;
     }
     
     .licores__item{
         width: 90%;
-        left: calc(50% - 8rem);
+        left: calc(12%);
         top: 8rem;
     }
     
     .licor__img{
-        width: 80%;
+        width: 85%;
+        height: 15rem;
     }
     
     #licorNext, #licorPrev{
-        top: 60%;
+        top: 22rem;
         left: 2rem;
     }
     

@@ -17,8 +17,12 @@
 /* Portrait and Landscape---------- Mobile */
 @media only screen and (min-device-width: 320px) and (max-device-width: 768px){ 
     .rodapie__enlaces{
-        width: 50%;
+        width: 80%;
         margin: 1rem 0;
+    }
+
+    .enlace__somos, .enlace__redes{
+        font-size: 1.8rem;
     }
 }
 

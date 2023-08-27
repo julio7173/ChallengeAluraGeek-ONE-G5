@@ -9,7 +9,7 @@
     border: 2px solid #fff;
 }
 
-.producto__img{
+.producto__img-dropArea{
     width: 100%;
     height: 100%;
     object-fit: cover;

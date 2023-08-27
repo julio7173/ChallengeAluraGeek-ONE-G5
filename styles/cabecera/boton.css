@@ -12,3 +12,11 @@
     font-weight: bold;
     height: 4rem;
 }
+
+/* Portrait and Landscape---------- Mobile */
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px){ 
+    .cabecera__boton{
+        width: 50%;
+        height: 3rem;
+    }
+}

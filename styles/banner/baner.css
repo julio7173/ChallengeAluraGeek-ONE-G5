@@ -29,6 +29,11 @@
     font-size: 5rem;
     font-weight: bold;
     transition: 2s;
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .prev {
@@ -52,21 +57,20 @@
 /* Portrait and Landscape---------- Mobile */
 @media only screen and (min-device-width: 320px) and (max-device-width: 768px){ 
     .contenedor__banner {
-        margin: 2rem 1%;
+        margin: 2rem 1% 4rem 1%;
         width: 98%;
-        height: 50vh;
+        height: 25rem;
     }
     
     .banner {
-        display: flex;
         margin: 1rem 3%;
         width: 94%;
-        height: 35vh;
+        height: 18rem;
     }
     
     .prev,
     .next {
-        top: 105%;
+        top: 41rem;
     }
     
     .prev {
@@ -82,7 +86,7 @@
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px){ 
     .prev,
     .next {
-        top: 65%;
+        top:65%;
         font-size: 8rem;
     }
 }
