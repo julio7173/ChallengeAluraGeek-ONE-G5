@@ -1,0 +1,9 @@
+.contenedor__productos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0000004f;
+    width: 80%;
+    margin: 2rem 10%;
+    border-radius: 1rem;
+}

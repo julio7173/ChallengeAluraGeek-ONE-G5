@@ -1,4 +1,4 @@
-.verMas__refresco {
+.item__verMas {
     background-color: #000000;
     border-radius: 1rem;
     padding: 1rem;
@@ -8,8 +8,10 @@
     display: none;
 }
 
-.refresco__nombre,
-.refresco__precio,
-.refresco__descripcion {
+.item__nombre,
+.item__precio,
+.item__descripcion {
     font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 0;
 }

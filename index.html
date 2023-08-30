@@ -16,12 +16,10 @@
     <link rel="stylesheet" href="styles/cabecera/barra.css">
     <link rel="stylesheet" href="styles/cabecera/boton.css">
     <link rel="stylesheet" href="styles/banner/baner.css">
-    <link rel="stylesheet" href="styles/producto-sliders/licores/licores.css">
-    <link rel="stylesheet" href="styles/producto-sliders/licores/verMas-licor.css">
-    <link rel="stylesheet" href="styles/producto-sliders/tragos/tragos.css">
-    <link rel="stylesheet" href="styles/producto-sliders/tragos/verMas__trago.css">
-    <link rel="stylesheet" href="styles/producto-sliders/refrescos/refrescos.css">
-    <link rel="stylesheet" href="styles/producto-sliders/refrescos/verMas__refresco.css">
+    <link rel="stylesheet" href="styles/producto-sliders/contenedorProductos.css">
+    <link rel="stylesheet" href="styles/producto-sliders/productosSliders.css">
+    <link rel="stylesheet" href="styles/producto-sliders/botonesSliders.css">
+    <link rel="stylesheet" href="styles/producto-sliders/verMasSliders.css">
     <link rel="stylesheet" href="styles/rodapie/rodapie.css">
     <link rel="stylesheet" href="styles/rodapie/logo.css">
     <link rel="stylesheet" href="styles/rodapie/enlaces.css">
@@ -32,7 +30,11 @@
 <body id="Body__Index">
     <header class="contenedor__cabecera">
         <img class="cabecera__img" src="styles/img/logo.png" alt="Logo">
-        <input class="cabecera__barra-busqueda" type="text" name="Busqueda" placeholder="Buscar">
+        <div class="busqueda">
+            <input class="cabecera__barra-busqueda" type="search" id="barraBusqueda" placeholder="Buscar">
+            <button id="botonBusqueda"></button>
+            <script src="/js/barraBusqueda.js"></script>
+        </div>
         <button class="cabecera__boton" onclick="irLogin(this)" value="login.html"> Iniciar Sesión </button>
         <script src="/js/login.js"></script>
     </header>
@@ -42,404 +44,325 @@
         <button class="next">&gt</button>
         <script src="/js/banner.js"></script>
     </section>
-    <section class="contenedor__licores">
-        <div class="licores__slider">
-            <div class="licores__item">
-                <img src="/styles/img/sliders/licores/1.png" alt="Blue Label" class="licor__img">
-                <div class="verMas__licor">
-                    <h2 class="licor__nombre"> Johnnie Walker: Blue Label </h2>
-                    <br>
-                    <p class="licor__precio"> 2000 BS. </p>
-                    <br>
-                    <p class="licor__descripcion"> Blue Label + Vital 2L + Cubetera con hielo (recargable) </p>
+    <section class="contenedor__productos" id="licores">
+        <div class="productos__slider">
+            <div class="slider__item">
+                <img src="/styles/img/sliders/licores/1.png" alt="Blue Label" class="item__img">
+                <div class="item__verMas">
+                    <h2 class="item__nombre"> Johnnie Walker: Blue Label </h2>
+                    <p class="item__precio"> 2000 BS. </p>
+                    <p class="item__descripcion"> Blue Label + Vital 2L + Cubetera con hielo (recargable) </p>
                 </div>
             </div>
-            <div class="licores__item">
-                <img src="/styles/img/sliders/licores/2.png" alt="Black Label" class="licor__img">
-                <div class="verMas__licor">
-                    <h2 class="licor__nombre"> Johnnie Walker: Black Label </h2>
-                    <br>
-                    <p class="licor__precio"> 550 BS. </p>
-                    <br>
-                    <p class="licor__descripcion"> Black Label + Vital 2L + Cubetera con hielo (recargable) </p>
+            <div class="slider__item">
+                <img src="/styles/img/sliders/licores/2.png" alt="Black Label" class="item__img">
+                <div class="item__verMas">
+                    <h2 class="item__nombre"> Johnnie Walker: Black Label </h2>
+                    <p class="item__precio"> 550 BS. </p>
+                    <p class="item__descripcion"> Black Label + Vital 2L + Cubetera con hielo (recargable) </p>
                 </div>
             </div>
-            <div class="licores__item">
-                <img src="/styles/img/sliders/licores/3.png" alt="Double Black" class="licor__img">
-                <div class="verMas__licor">
-                    <h2 class="licor__nombre"> Johnnie Walker: Double Label </h2>
-                    <br>
-                    <p class="licor__precio"> 750 BS. </p>
-                    <br>
-                    <p class="licor__descripcion"> Double Label + Vital 2L + Cubetera con hielo (recargable) </p>
+            <div class="slider__item">
+                <img src="/styles/img/sliders/licores/3.png" alt="Double Black" class="item__img">
+                <div class="item__verMas">
+                    <h2 class="item__nombre"> Johnnie Walker: Double Label </h2>
+                    <p class="item__precio"> 750 BS. </p>
+                    <p class="item__descripcion"> Double Label + Vital 2L + Cubetera con hielo (recargable) </p>
                 </div>
             </div>
-            <div class="licores__item">
-                <img src="/styles/img/sliders/licores/4.png" alt="Old Parr" class="licor__img">
-                <div class="verMas__licor">
-                    <h2 class="licor__nombre"> Grand Old Parr </h2>
-                    <br>
-                    <p class="licor__precio"> 600 BS. </p>
-                    <br>
-                    <p class="licor__descripcion"> Old Parr + Vital 2L + Cubetera con hielo (recargable) </p>
+            <div class="slider__item">
+                <img src="/styles/img/sliders/licores/4.png" alt="Old Parr" class="item__img">
+                <div class="item__verMas">
+                    <h2 class="item__nombre"> Grand Old Parr </h2>
+                    <p class="item__precio"> 600 BS. </p>
+                    <p class="item__descripcion"> Old Parr + Vital 2L + Cubetera con hielo (recargable) </p>
                 </div>
             </div>
-            <div class="licores__item">
-                <img src="/styles/img/sliders/licores/5.png" alt="Red Label" class="licor__img">
-                <div class="verMas__licor">
-                    <h2 class="licor__nombre"> Johnnie Walker: Red Label </h2>
-                    <br>
-                    <p class="licor__precio"> 350 BS. </p>
-                    <br>
-                    <p class="licor__descripcion"> Red Label + Vital 2L + Cubetera con hielo (recargable) </p>
+            <div class="slider__item">
+                <img src="/styles/img/sliders/licores/5.png" alt="Red Label" class="item__img">
+                <div class="item__verMas">
+                    <h2 class="item__nombre"> Johnnie Walker: Red Label </h2>
+                    <p class="item__precio"> 350 BS. </p>
+                    <p class="item__descripcion"> Red Label + Vital 2L + Cubetera con hielo (recargable) </p>
                 </div>
             </div>
-            <div class="licores__item">
-                <img src="/styles/img/sliders/licores/6.png" alt="Jack Daniel's" class="licor__img">
-                <div class="verMas__licor">
-                    <h2 class="licor__nombre"> Jack Daniel's </h2>
-                    <br>
-                    <p class="licor__precio"> 600 BS. </p>
-                    <br>
-                    <p class="licor__descripcion"> Jack Daniel's + Vital 2L + Cubetera con hielo (recargable) </p>
+            <div class="slider__item">
+                <img src="/styles/img/sliders/licores/6.png" alt="Jack Daniel's" class="item__img">
+                <div class="item__verMas">
+                    <h2 class="item__nombre"> Jack Daniel's </h2>
+                    <p class="item__precio"> 600 BS. </p>
+                    <p class="item__descripcion"> Jack Daniel's + Vital 2L + Cubetera con hielo (recargable) </p>
                 </div>
             </div>
-            <div class="licores__item">
-                <img src="/styles/img/sliders/licores/7.png" alt="Flor de Caña" class="licor__img">
-                <div class="verMas__licor">
-                    <h2 class="licor__nombre"> Flor de Caña </h2>
-                    <br>
-                    <p class="licor__precio"> 270 BS. </p>
-                    <br>
-                    <p class="licor__descripcion"> Flor de Caña + Coca-Cola 2L + Cubetera con hielo (recargable) </p>
+            <div class="slider__item">
+                <img src="/styles/img/sliders/licores/7.png" alt="Flor de Caña" class="item__img">
+                <div class="item__verMas">
+                    <h2 class="item__nombre"> Flor de Caña </h2>
+                    <p class="item__precio"> 270 BS. </p>
+                    <p class="item__descripcion"> Flor de Caña + Coca-Cola 2L + Cubetera con hielo (recargable) </p>
                 </div>
             </div>
-            <div class="licores__item">
-                <img src="/styles/img/sliders/licores/8.png" alt="Havana Club" class="licor__img">
-                <div class="verMas__licor">
-                    <h2 class="licor__nombre"> Havana Club </h2>
-                    <br>
-                    <p class="licor__precio"> 400 BS. </p>
-                    <br>
-                    <p class="licor__descripcion"> Havana Club + Coca-Cola 2L + Cubetera con hielo (recargable) + Tajo
+            <div class="slider__item">
+                <img src="/styles/img/sliders/licores/8.png" alt="Havana Club" class="item__img">
+                <div class="item__verMas">
+                    <h2 class="item__nombre"> Havana Club </h2>
+                    <p class="item__precio"> 400 BS. </p>
+                    <p class="item__descripcion"> Havana Club + Coca-Cola 2L + Cubetera con hielo (recargable) + Tajo
                         de limones (recargable) </p>
                 </div>
             </div>
-            <div class="licores__item">
-                <img src="/styles/img/sliders/licores/9.png" alt="Bacardi Solera" class="licor__img">
-                <div class="verMas__licor">
-                    <h2 class="licor__nombre"> Bacardi: Ron Solera </h2>
-                    <br>
-                    <p class="licor__precio"> 350 BS. </p>
-                    <br>
-                    <p class="licor__descripcion"> Bacardi Solera + Coca-Cola 2L + Cubetera con hielo (recargable) +
+            <div class="slider__item">
+                <img src="/styles/img/sliders/licores/9.png" alt="Bacardi Solera" class="item__img">
+                <div class="item__verMas">
+                    <h2 class="item__nombre"> Bacardi: Ron Solera </h2>
+                    <p class="item__precio"> 350 BS. </p>
+                    <p class="item__descripcion"> Bacardi Solera + Coca-Cola 2L + Cubetera con hielo (recargable) +
                         Tajo de limones (recargable) </p>
                 </div>
             </div>
-            <div class="licores__item">
-                <img src="/styles/img/sliders/licores/10.png" alt="Jose Cuervo (normal)" class="licor__img">
-                <div class="verMas__licor">
-                    <h2 class="licor__nombre"> Jose Cuervo: Reposado Especial </h2>
-                    <br>
-                    <p class="licor__precio"> 250 BS. </p>
-                    <br>
-                    <p class="licor__descripcion"> Tequila + Porción de sal (recargable) + Tajo de limones (recargable)
+            <div class="slider__item">
+                <img src="/styles/img/sliders/licores/10.png" alt="Jose Cuervo (normal)" class="item__img">
+                <div class="item__verMas">
+                    <h2 class="item__nombre"> Jose Cuervo: Reposado Especial </h2>
+                    <p class="item__precio"> 250 BS. </p>
+                    <p class="item__descripcion"> Tequila + Porción de sal (recargable) + Tajo de limones (recargable)
                     </p>
                 </div>
             </div>
-            <div class="licores__item">
-                <img src="/styles/img/sliders/licores/11.png" alt="Jose Cuervo (blanco)" class="licor__img">
-                <div class="verMas__licor">
-                    <h2 class="licor__nombre"> Jose Cuervo: Reposado Especial Silver </h2>
-                    <br>
-                    <p class="licor__precio"> 250 BS. </p>
-                    <br>
-                    <p class="licor__descripcion"> Tequila Blanco + Porción de sal (recargable) + Tajo de limones
+            <div class="slider__item">
+                <img src="/styles/img/sliders/licores/11.png" alt="Jose Cuervo (blanco)" class="item__img">
+                <div class="item__verMas">
+                    <h2 class="item__nombre"> Jose Cuervo: Reposado Especial Silver </h2>
+                    <p class="item__precio"> 250 BS. </p>
+                    <p class="item__descripcion"> Tequila Blanco + Porción de sal (recargable) + Tajo de limones
                         (recargable) </p>
                 </div>
             </div>
-            <div class="licores__item">
-                <img src="/styles/img/sliders/licores/12.png" alt="Kohlberg Tinto" class="licor__img">
-                <div class="verMas__licor">
-                    <h2 class="licor__nombre"> Kohlberg: Tinto Clásico </h2>
-                    <br>
-                    <p class="licor__precio"> 120 BS. </p>
-                    <br>
-                    <p class="licor__descripcion"> Vino Tinto + Coca-Cola 2L + Cubetera con hielo (recargable) </p>
+            <div class="slider__item">
+                <img src="/styles/img/sliders/licores/12.png" alt="Kohlberg Tinto" class="item__img">
+                <div class="item__verMas">
+                    <h2 class="item__nombre"> Kohlberg: Tinto Clásico </h2>
+                    <p class="item__precio"> 120 BS. </p>
+                    <p class="item__descripcion"> Vino Tinto + Coca-Cola 2L + Cubetera con hielo (recargable) </p>
                 </div>
             </div>
-            <button id="licorNext">&gt</button>
-            <button id="licorPrev">&lt</button>
+            <button class="next__item">&gt</button>
+            <button class="prev__item">&lt</button>
         </div>
-        <script src="/js/productos__sliders/licor/licores.js"></script>
-        <script src="/js/productos__sliders/licor/verMas__licor.js"></script>
     </section>
-    <section class="contenedor__tragos">
-        <div class="tragos__slider">
-            <div class="tragos__item">
-                <img src="/styles/img/sliders/tragos/22.png" alt="Pecera Jarra" class="trago__img">
-                <div class="verMas__trago">
-                    <h2 class="trago__nombre"> Pecera: Jarra </h2>
-                    <br>
-                    <p class="trago__precio"> 50 BS. </p>
-                    <br>
-                    <p class="trago__descripcion"> Una jarra de pecera de 1L </p>
+    <section class="contenedor__productos" id="tragos">
+        <div class="productos__slider">
+            <div class="slider__item">
+                <img src="/styles/img/sliders/tragos/22.png" alt="Pecera Jarra" class="item__img">
+                <div class="item__verMas">
+                    <h2 class="item__nombre"> Pecera: Jarra </h2>
+                    <p class="item__precio"> 50 BS. </p>
+                    <p class="item__descripcion"> Una jarra de pecera de 1L </p>
                 </div>
             </div>
-            <div class="tragos__item">
-                <img src="/styles/img/sliders/tragos/23.png" alt="Mojito Jarra" class="trago__img">
-                <div class="verMas__trago">
-                    <h2 class="trago__nombre"> Mojito: Jarra </h2>
-                    <br>
-                    <p class="trago__precio"> 50 BS. </p>
-                    <br>
-                    <p class="trago__descripcion"> Una jarra de mojito de 1L </p>
+            <div class="slider__item">
+                <img src="/styles/img/sliders/tragos/23.png" alt="Mojito Jarra" class="item__img">
+                <div class="item__verMas">
+                    <h2 class="item__nombre"> Mojito: Jarra </h2>
+                    <p class="item__precio"> 50 BS. </p>
+                    <p class="item__descripcion"> Una jarra de mojito de 1L </p>
                 </div>
             </div>
-            <div class="tragos__item">
-                <img src="/styles/img/sliders/tragos/24.png" alt="Daiquiri Fresa" class="trago__img">
-                <div class="verMas__trago">
-                    <h2 class="trago__nombre"> Daiquiri Fresa: Vaso </h2>
-                    <br>
-                    <p class="trago__precio"> 30 BS. </p>
-                    <br>
-                    <p class="trago__descripcion"> Un vaso de daiquiri de fresa </p>
+            <div class="slider__item">
+                <img src="/styles/img/sliders/tragos/24.png" alt="Daiquiri Fresa" class="item__img">
+                <div class="item__verMas">
+                    <h2 class="item__nombre"> Daiquiri Fresa: Vaso </h2>
+                    <p class="item__precio"> 30 BS. </p>
+                    <p class="item__descripcion"> Un vaso de daiquiri de fresa </p>
                 </div>
             </div>
-            <div class="tragos__item">
-                <img src="/styles/img/sliders/tragos/25.png" alt="Daiquiri Maracuya" class="trago__img">
-                <div class="verMas__trago">
-                    <h2 class="trago__nombre"> Daiquiri Maracuya: Vaso </h2>
-                    <br>
-                    <p class="trago__precio"> 30 BS. </p>
-                    <br>
-                    <p class="trago__descripcion"> Un vaso de daiquiri de maracuya </p>
+            <div class="slider__item">
+                <img src="/styles/img/sliders/tragos/25.png" alt="Daiquiri Maracuya" class="item__img">
+                <div class="item__verMas">
+                    <h2 class="item__nombre"> Daiquiri Maracuya: Vaso </h2>
+                    <p class="item__precio"> 30 BS. </p>
+                    <p class="item__descripcion"> Un vaso de daiquiri de maracuya </p>
                 </div>
             </div>
-            <div class="tragos__item">
-                <img src="/styles/img/sliders/tragos/26.png" alt="La Pitufina" class="trago__img">
-                <div class="verMas__trago">
-                    <h2 class="trago__nombre"> La Pitufina: Vaso </h2>
-                    <br>
-                    <p class="trago__precio"> 30 BS. </p>
-                    <br>
-                    <p class="trago__descripcion"> Un vaso de la pitufina </p>
+            <div class="slider__item">
+                <img src="/styles/img/sliders/tragos/26.png" alt="La Pitufina" class="item__img">
+                <div class="item__verMas">
+                    <h2 class="item__nombre"> La Pitufina: Vaso </h2>
+                    <p class="item__precio"> 30 BS. </p>
+                    <p class="item__descripcion"> Un vaso de la pitufina </p>
                 </div>
             </div>
-            <div class="tragos__item">
-                <img src="/styles/img/sliders/tragos/27.png" alt="La Paloma" class="trago__img">
-                <div class="verMas__trago">
-                    <h2 class="trago__nombre"> La Paloma: Vaso </h2>
-                    <br>
-                    <p class="trago__precio"> 30 BS. </p>
-                    <br>
-                    <p class="trago__descripcion"> Un vaso de la paloma </p>
+            <div class="slider__item">
+                <img src="/styles/img/sliders/tragos/27.png" alt="La Paloma" class="item__img">
+                <div class="item__verMas">
+                    <h2 class="item__nombre"> La Paloma: Vaso </h2>
+                    <p class="item__precio"> 30 BS. </p>
+                    <p class="item__descripcion"> Un vaso de la paloma </p>
                 </div>
             </div>
-            <div class="tragos__item">
-                <img src="/styles/img/sliders/tragos/28.png" alt="La Pantera Rosa" class="trago__img">
-                <div class="verMas__trago">
-                    <h2 class="trago__nombre"> Pantera Rosa: Vaso </h2>
-                    <br>
-                    <p class="trago__precio"> 40 BS. </p>
-                    <br>
-                    <p class="trago__descripcion"> Un vaso de la pantera rosa </p>
+            <div class="slider__item">
+                <img src="/styles/img/sliders/tragos/28.png" alt="La Pantera Rosa" class="item__img">
+                <div class="item__verMas">
+                    <h2 class="item__nombre"> Pantera Rosa: Vaso </h2>
+                    <p class="item__precio"> 40 BS. </p>
+                    <p class="item__descripcion"> Un vaso de la pantera rosa </p>
                 </div>
             </div>
-            <div class="tragos__item">
-                <img src="/styles/img/sliders/tragos/29.png" alt="El Destornillador" class="trago__img">
-                <div class="verMas__trago">
-                    <h2 class="trago__nombre"> Destornillador: Vaso </h2>
-                    <br>
-                    <p class="trago__precio"> 30 BS. </p>
-                    <br>
-                    <p class="trago__descripcion"> Un vaso de el destornillador </p>
+            <div class="slider__item">
+                <img src="/styles/img/sliders/tragos/29.png" alt="El Destornillador" class="item__img">
+                <div class="item__verMas">
+                    <h2 class="item__nombre"> Destornillador: Vaso </h2>
+                    <p class="item__precio"> 30 BS. </p>
+                    <p class="item__descripcion"> Un vaso de el destornillador </p>
                 </div>
             </div>
-            <div class="tragos__item">
-                <img src="/styles/img/sliders/tragos/30.png" alt="Blue Lagoon" class="trago__img">
-                <div class="verMas__trago">
-                    <h2 class="trago__nombre"> Blue Lagoon: Vaso </h2>
-                    <br>
-                    <p class="trago__precio"> 30 BS. </p>
-                    <br>
-                    <p class="trago__descripcion"> Un vaso de blue lagoon </p>
+            <div class="slider__item">
+                <img src="/styles/img/sliders/tragos/30.png" alt="Blue Lagoon" class="item__img">
+                <div class="item__verMas">
+                    <h2 class="item__nombre"> Blue Lagoon: Vaso </h2>
+                    <p class="item__precio"> 30 BS. </p>
+                    <p class="item__descripcion"> Un vaso de blue lagoon </p>
                 </div>
             </div>
-            <div class="tragos__item">
-                <img src="/styles/img/sliders/tragos/31.png" alt="Tequila Sunrise" class="trago__img">
-                <div class="verMas__trago">
-                    <h2 class="trago__nombre"> Tequila Sunrise: Vaso </h2>
-                    <br>
-                    <p class="trago__precio"> 30 BS. </p>
-                    <br>
-                    <p class="trago__descripcion"> Un vaso de tequila sunrise </p>
+            <div class="slider__item">
+                <img src="/styles/img/sliders/tragos/31.png" alt="Tequila Sunrise" class="item__img">
+                <div class="item__verMas">
+                    <h2 class="item__nombre"> Tequila Sunrise: Vaso </h2>
+                    <p class="item__precio"> 30 BS. </p>
+                    <p class="item__descripcion"> Un vaso de tequila sunrise </p>
                 </div>
             </div>
-            <div class="tragos__item">
-                <img src="/styles/img/sliders/tragos/32.png" alt="Mojito de Coco" class="trago__img">
-                <div class="verMas__trago">
-                    <h2 class="trago__nombre"> Mojito Coco: Vaso </h2>
-                    <br>
-                    <p class="trago__precio"> 35 BS. </p>
-                    <br>
-                    <p class="trago__descripcion"> Un vaso de mojito de coco </p>
+            <div class="slider__item">
+                <img src="/styles/img/sliders/tragos/32.png" alt="Mojito de Coco" class="item__img">
+                <div class="item__verMas">
+                    <h2 class="item__nombre"> Mojito Coco: Vaso </h2>
+                    <p class="item__precio"> 35 BS. </p>
+                    <p class="item__descripcion"> Un vaso de mojito de coco </p>
                 </div>
             </div>
-            <div class="tragos__item">
-                <img src="/styles/img/sliders/tragos/33.png" alt="Sex On The Beach" class="trago__img">
-                <div class="verMas__trago">
-                    <h2 class="trago__nombre"> Sex on the Beach: Vaso </h2>
-                    <br>
-                    <p class="trago__precio"> 30 BS. </p>
-                    <br>
-                    <p class="trago__descripcion"> Un vaso de sex on the beach </p>
+            <div class="slider__item">
+                <img src="/styles/img/sliders/tragos/33.png" alt="Sex On The Beach" class="item__img">
+                <div class="item__verMas">
+                    <h2 class="item__nombre"> Sex on the Beach: Vaso </h2>
+                    <p class="item__precio"> 30 BS. </p>
+                    <p class="item__descripcion"> Un vaso de sex on the beach </p>
                 </div>
             </div>
-            <div class="tragos__item">
-                <img src="/styles/img/sliders/tragos/34.png" alt="Piña Colada" class="trago__img">
-                <div class="verMas__trago">
-                    <h2 class="trago__nombre"> Piña Colada: Vaso </h2>
-                    <br>
-                    <p class="trago__precio"> 40 BS. </p>
-                    <br>
-                    <p class="trago__descripcion"> Un vaso de piña colada </p>
+            <div class="slider__item">
+                <img src="/styles/img/sliders/tragos/34.png" alt="Piña Colada" class="item__img">
+                <div class="item__verMas">
+                    <h2 class="item__nombre"> Piña Colada: Vaso </h2>
+                    <p class="item__precio"> 40 BS. </p>
+                    <p class="item__descripcion"> Un vaso de piña colada </p>
                 </div>
             </div>
-            <div class="tragos__item">
-                <img src="/styles/img/sliders/tragos/35.png" alt="Orgasmo" class="trago__img">
-                <div class="verMas__trago">
-                    <h2 class="trago__nombre"> Orgasmo: Vaso </h2>
-                    <br>
-                    <p class="trago__precio"> 40 BS. </p>
-                    <br>
-                    <p class="trago__descripcion"> Un vaso de orgasmo </p>
+            <div class="slider__item">
+                <img src="/styles/img/sliders/tragos/35.png" alt="Orgasmo" class="item__img">
+                <div class="item__verMas">
+                    <h2 class="item__nombre"> Orgasmo: Vaso </h2>
+                    <p class="item__precio"> 40 BS. </p>
+                    <p class="item__descripcion"> Un vaso de orgasmo </p>
                 </div>
             </div>
-            <div class="tragos__item">
-                <img src="/styles/img/sliders/tragos/36.png" alt="Margarita Corona (roja)" class="trago__img">
-                <div class="verMas__trago">
-                    <h2 class="trago__nombre"> Margarita Corona: Roja </h2>
-                    <br>
-                    <p class="trago__precio"> 120 BS. </p>
-                    <br>
-                    <p class="trago__descripcion"> 2 coronas + coctel de frutas </p>
+            <div class="slider__item">
+                <img src="/styles/img/sliders/tragos/36.png" alt="Margarita Corona (roja)" class="item__img">
+                <div class="item__verMas">
+                    <h2 class="item__nombre"> Margarita Corona: Roja </h2>
+                    <p class="item__precio"> 120 BS. </p>
+                    <p class="item__descripcion"> 2 coronas + coctel de frutas </p>
                 </div>
             </div>
-            <div class="tragos__item">
-                <img src="/styles/img/sliders/tragos/37.png" alt="Margarita Corona (azul)" class="trago__img">
-                <div class="verMas__trago">
-                    <h2 class="trago__nombre"> Margarita Corona: Azul </h2>
-                    <br>
-                    <p class="trago__precio"> 120 BS. </p>
-                    <br>
-                    <p class="trago__descripcion"> 2 coronas + coctel de frutas </p>
+            <div class="slider__item">
+                <img src="/styles/img/sliders/tragos/37.png" alt="Margarita Corona (azul)" class="item__img">
+                <div class="item__verMas">
+                    <h2 class="item__nombre"> Margarita Corona: Azul </h2>
+                    <p class="item__precio"> 120 BS. </p>
+                    <p class="item__descripcion"> 2 coronas + coctel de frutas </p>
                 </div>
             </div>
-            <button id="tragoNext">&gt</button>
-            <button id="tragoPrev">&lt</button>
+            <button class="next__item">&gt</button>
+            <button class="prev__item">&lt</button>
         </div>
-        <script src="/js/productos__sliders/trago/tragos.js"></script>
-        <script src="/js/productos__sliders/trago/verMas__trago.js"></script>
     </section>
-    <section class="contenedor__refrecos">
-        <div class="refrescos__slider">
-            <div class="refrecos__item">
-                <img src="/styles/img/sliders/refrescos/13.png" alt="Paceña Macanuda" class="refresco__img">
-                <div class="verMas__refresco">
-                    <h2 class="refresco__nombre"> Paceña: Macanuda </h2>
-                    <br>
-                    <p class="refresco__precio"> 20 BS. </p>
-                    <br>
-                    <p class="refresco__descripcion"> Paceña macanuda + vasos </p>
+    <section class="contenedor__productos" id="refrescos">
+        <div class="productos__slider">
+            <div class="slider__item">
+                <img src="/styles/img/sliders/refrescos/13.png" alt="Paceña Macanuda" class="item__img">
+                <div class="item__verMas">
+                    <h2 class="item__nombre"> Paceña: Macanuda </h2>
+                    <p class="item__precio"> 20 BS. </p>
+                    <p class="item__descripcion"> Paceña macanuda + vasos </p>
                 </div>
             </div>
-            <div class="refrecos__item">
-                <img src="/styles/img/sliders/refrescos/14.png" alt="Huari" class="refresco__img">
-                <div class="verMas__refresco">
-                    <h2 class="refresco__nombre"> Huari </h2>
-                    <br>
-                    <p class="refresco__precio"> 25 BS. </p>
-                    <br>
-                    <p class="refresco__descripcion"> Huari + vasos </p>
+            <div class="slider__item">
+                <img src="/styles/img/sliders/refrescos/14.png" alt="Huari" class="item__img">
+                <div class="item__verMas">
+                    <h2 class="item__nombre"> Huari </h2>
+                    <p class="item__precio"> 25 BS. </p>
+                    <p class="item__descripcion"> Huari + vasos </p>
                 </div>
             </div>
-            <div class="refrecos__item">
-                <img src="/styles/img/sliders/refrescos/15.png" alt="51 Ice" class="refresco__img">
-                <div class="verMas__refresco">
-                    <h2 class="refresco__nombre"> 51 Ice </h2>
-                    <br>
-                    <p class="refresco__precio"> 20 BS. </p>
-                    <br>
-                    <p class="refresco__descripcion"> Una botella de 51 ice </p>
+            <div class="slider__item">
+                <img src="/styles/img/sliders/refrescos/15.png" alt="51 Ice" class="item__img">
+                <div class="item__verMas">
+                    <h2 class="item__nombre"> 51 Ice </h2>
+                    <p class="item__precio"> 20 BS. </p>
+                    <p class="item__descripcion"> Una botella de 51 ice </p>
                 </div>
             </div>
-            <div class="refrecos__item">
-                <img src="/styles/img/sliders/refrescos/16.png" alt="Corona" class="refresco__img">
-                <div class="verMas__refresco">
-                    <h2 class="refresco__nombre"> Corona </h2>
-                    <br>
-                    <p class="refresco__precio"> 20 BS. </p>
-                    <br>
-                    <p class="refresco__descripcion"> Corona + tajo de limon </p>
+            <div class="slider__item">
+                <img src="/styles/img/sliders/refrescos/16.png" alt="Corona" class="item__img">
+                <div class="item__verMas">
+                    <h2 class="item__nombre"> Corona </h2>
+                    <p class="item__precio"> 20 BS. </p>
+                    <p class="item__descripcion"> Corona + tajo de limon </p>
                 </div>
             </div>
-            <div class="refrecos__item">
-                <img src="/styles/img/sliders/refrescos/17.png" alt="Coca-Cola" class="refresco__img">
-                <div class="verMas__refresco">
-                    <h2 class="refresco__nombre"> Coca-Cola: 2L </h2>
-                    <br>
-                    <p class="refresco__precio"> 20 BS. </p>
-                    <br>
-                    <p class="refresco__descripcion"> Coca-Cola + vasos </p>
+            <div class="slider__item">
+                <img src="/styles/img/sliders/refrescos/17.png" alt="Coca-Cola" class="item__img">
+                <div class="item__verMas">
+                    <h2 class="item__nombre"> Coca-Cola: 2L </h2>
+                    <p class="item__precio"> 20 BS. </p>
+                    <p class="item__descripcion"> Coca-Cola + vasos </p>
                 </div>
             </div>
-            <div class="refrecos__item">
-                <img src="/styles/img/sliders/refrescos/18.png" alt="Vital 2L" class="refresco__img">
-                <div class="verMas__refresco">
-                    <h2 class="refresco__nombre"> Agua Vital: 2L </h2>
-                    <br>
-                    <p class="refresco__precio"> 20 BS. </p>
-                    <br>
-                    <p class="refresco__descripcion"> Agua vital 2L + vasos </p>
+            <div class="slider__item">
+                <img src="/styles/img/sliders/refrescos/18.png" alt="Vital 2L" class="item__img">
+                <div class="item__verMas">
+                    <h2 class="item__nombre"> Agua Vital: 2L </h2>
+                    <p class="item__precio"> 20 BS. </p>
+                    <p class="item__descripcion"> Agua vital 2L + vasos </p>
                 </div>
             </div>
-            <div class="refrecos__item">
-                <img src="/styles/img/sliders/refrescos/19.png" alt="Vital 600mL" class="refresco__img">
-                <div class="verMas__refresco">
-                    <h2 class="refresco__nombre"> Agua Vital: 600mL </h2>
-                    <br>
-                    <p class="refresco__precio"> 10 BS. </p>
-                    <br>
-                    <p class="refresco__descripcion"> Agua vital de 600mL </p>
+            <div class="slider__item">
+                <img src="/styles/img/sliders/refrescos/19.png" alt="Vital 600mL" class="item__img">
+                <div class="item__verMas">
+                    <h2 class="item__nombre"> Agua Vital: 600mL </h2>
+                    <p class="item__precio"> 10 BS. </p>
+                    <p class="item__descripcion"> Agua vital de 600mL </p>
                 </div>
             </div>
-            <div class="refrecos__item">
-                <img src="/styles/img/sliders/refrescos/20.png" alt="Sprite" class="refresco__img">
-                <div class="verMas__refresco">
-                    <h2 class="refresco__nombre"> Sprite: 2L </h2>
-                    <br>
-                    <p class="refresco__precio"> 20 BS. </p>
-                    <br>
-                    <p class="refresco__descripcion"> Sprite + vasos </p>
+            <div class="slider__item">
+                <img src="/styles/img/sliders/refrescos/20.png" alt="Sprite" class="item__img">
+                <div class="item__verMas">
+                    <h2 class="item__nombre"> Sprite: 2L </h2>
+                    <p class="item__precio"> 20 BS. </p>
+                    <p class="item__descripcion"> Sprite + vasos </p>
                 </div>
             </div>
-            <div class="refrecos__item">
-                <img src="/styles/img/sliders/refrescos/21.png" alt="Red Bull" class="refresco__img">
-                <div class="verMas__refresco">
-                    <h2 class="refresco__nombre"> Red Bull </h2>
-                    <br>
-                    <p class="refresco__precio"> 20 BS. </p>
-                    <br>
-                    <p class="refresco__descripcion"> Una lata de red bull </p>
+            <div class="slider__item">
+                <img src="/styles/img/sliders/refrescos/21.png" alt="Red Bull" class="item__img">
+                <div class="item__verMas">
+                    <h2 class="item__nombre"> Red Bull </h2>
+                    <p class="item__precio"> 20 BS. </p>
+                    <p class="item__descripcion"> Una lata de red bull </p>
                 </div>
             </div>
-            <button id="refrescoNext">&gt</button>
-            <button id="refrescoPrev">&lt</button>
+            <button class="next__item">&gt</button>
+            <button class="prev__item">&lt</button>
         </div>
-        <script src="/js/productos__sliders/refresco/refrescos.js"></script>
-        <script src="/js/productos__sliders/refresco/verMas__refresco.js"></script>
     </section>
+    <script src="/js/productosSliders.js"></script>
     <section class="contenedor__rodapie">
         <div class="rodapie__logo"><img src="/styles/img/logo.png" alt="Logo Luna Park" class="rodapie__img"></div>
         <div class="rodapie__enlaces">

@@ -1,0 +1,28 @@
+.next__item, .prev__item{
+    width: 5rem;
+    position: absolute;
+    top: 40%;
+    color: chartreuse;
+    background-color: transparent;
+    border: none;
+    font-family: 'Concert One', cursive;
+    font-size: 5rem;
+    font-weight: bold;
+    left: -1rem;
+    transition: 1s;
+}
+
+.next__item{
+    left: unset;
+    right: -1rem;
+}
+
+.next__item:hover{
+    cursor: pointer;
+    transform: translateX(0.5rem);
+}
+
+.prev__item:hover{
+    cursor: pointer;
+    transform: translateX(-0.5rem);
+}
