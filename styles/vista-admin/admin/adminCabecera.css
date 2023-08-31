@@ -2,7 +2,6 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 5%;
     border-radius: 1rem;
     margin: 2rem;
 }
@@ -28,24 +27,4 @@
 .todos__boton:hover{
     background-color: chartreuse;
     color: black;
-}
-
-/* Portrait and Landscape---------- Mobile */
-@media only screen and (min-device-width: 320px) and (max-device-width: 768px){ 
-    .todos__cabecera{
-        flex-direction: column;
-        height: 5%;
-    }
-    
-    .todos__titulo{
-        text-align: center;
-        font-size: 2.5rem;
-        margin: 1rem;
-    }
-    
-    .todos__boton{
-        font-size: 2rem;
-        height: 50%;
-        width: 80%;
-    }
 }

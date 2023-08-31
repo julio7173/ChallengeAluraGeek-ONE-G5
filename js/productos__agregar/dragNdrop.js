@@ -62,8 +62,6 @@ function showFile() {
         fileReader.onload = () => {
             // Obtener la URL del archivo y guardarla en la variable fileURL
             let fileURL = fileReader.result;
-            // Mostrar la URL en la consola del navegador (opcional)
-            console.log(fileURL);
             // Crear una etiqueta <img> con la clase producto__img y el atributo src igual a la URL del archivo
             let imgTag = `<img src="${fileURL}" class="producto__img-dropArea">`;
             // Insertar la etiqueta <img> en el elemento dropArea, reemplazando su contenido anterior
@@ -78,57 +76,3 @@ function showFile() {
         dropArea.classList.remove("active");
     }
 }
-
-
-// Obtener los elementos del html
-const productoCategoria = document.querySelector(".producto__categoria");
-const productoNombre = document.querySelector(".producto__nombre");
-const productoPrecio = document.querySelector(".producto__precio");
-const productoAgregar = document.querySelector(".producto__agregar");
-const errorImagen = document.querySelector(".error-imagen");
-const errorCategoria = document.querySelector(".error-categoria");
-const errorNombre = document.querySelector(".error-nombre");
-const errorPrecio = document.querySelector(".error-precio");
-
-// Agregar un evento al botón de agregar producto
-productoAgregar.addEventListener("click", function (e) {
-    // Evitar que el formulario se envíe
-    e.preventDefault();
-    // Limpiar los mensajes de error anteriores
-    errorImagen.textContent = "";
-    errorCategoria.textContent = "";
-    errorNombre.textContent = "";
-    errorPrecio.textContent = "";
-    // Obtener los valores de los campos
-    const categoria = productoCategoria.value.trim();
-    const nombre = productoNombre.value.trim();
-    const precio = productoPrecio.value.trim();
-    // Validar que los campos no estén vacíos
-    if (categoria === "") {
-        errorCategoria.textContent = "La categoría del producto no puede estar vacía";
-    }
-    if (nombre === "") {
-        errorNombre.textContent = "El nombre del producto no puede estar vacío";
-    }
-    if (precio === "") {
-        errorPrecio.textContent = "El precio del producto no puede estar vacío";
-    }
-    // Validar que los campos de categoría y nombre tengan máximo 20 caracteres
-    if (categoria.length > 20) {
-        errorCategoria.textContent = "La categoría del producto debe tener máximo 20 caracteres";
-    }
-    if (nombre.length > 20) {
-        errorNombre.textContent = "El nombre del producto debe tener máximo 20 caracteres";
-    }
-    // Verificar que todos los campos son válidos
-if (categoria !== "" && nombre !== "" && precio !== "" && categoria.length <= 20 && nombre.length <= 20) {
-    // Verificar que hay una imagen cargada
-    if (file) {
-        // Mandar una alerta con el mensaje de éxito
-        alert("El producto se agregó con éxito");
-    } else {
-        // Mostrar un mensaje de error en el span errorImagen
-        errorImagen.textContent = "Debes cargar una imagen para el producto";
-    }
-}
-});

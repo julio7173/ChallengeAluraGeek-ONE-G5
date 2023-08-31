@@ -29,7 +29,11 @@
 <body id="Body__Producto">
     <header class="contenedor__cabecera">
         <img class="cabecera__img" src="styles/img/logo.png" alt="Logo">
-        <input class="cabecera__barra-busqueda" type="text" name="Busqueda" placeholder="Buscar">
+        <div class="busqueda">
+            <input class="cabecera__barra-busqueda" type="search" id="barraBusqueda" placeholder="Buscar">
+            <button id="botonBusqueda"></button>
+            <script src="/js/barraBusqueda.js"></script>
+        </div>
     </header>
     <section class="nuevo__producto">
         <h2 class="producto__titulo"> Agregar nuevo producto </h2>
@@ -41,6 +45,7 @@
             <input type="file" hidden class="producto__boton-2">
         </div>
         <span class="error-imagen"></span>
+        <script src="/js/productos__agregar/dragNdrop.js"></script>
         <form class="formulario__producto">
             <input type="text" class="producto__categoria" placeholder="Categoria del producto">
             <span class="error-categoria"></span>
@@ -48,9 +53,11 @@
             <span class="error-nombre"></span>
             <input type="number" class="producto__precio" placeholder="Precio del producto">
             <span class="error-precio"></span>
+            <input type="text" class="producto__descripcion" placeholder="Descripción del producto">
+            <span class="error-descripcion"></span>
             <input type="submit" class="producto__agregar" value="Agregar producto">
         </form>
-        <script src="/js/productos__agregar/nuevoProducto.js"></script>
+        <script src="/js/productos__agregar/formularioAgregar.js"></script>
     </section>
     <section class="contenedor__rodapie">
         <div class="rodapie__logo"><img src="/styles/img/logo.png" alt="Logo Luna Park" class="rodapie__img"></div>

@@ -1,0 +1,25 @@
+.todos__producto{
+    width: 100%;
+    border-radius: 1rem;
+    margin-top: 2rem;
+}
+
+.producto__detalle{
+    background-color: #000;
+    border-radius: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.detalle__nombre, .detalle__precio, .detalle__descripcion{
+    margin-bottom: 0.5rem;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.detalle__nombre{
+    font-weight: bold;
+    color: chartreuse;
+}

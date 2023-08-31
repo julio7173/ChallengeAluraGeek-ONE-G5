@@ -1,0 +1,117 @@
+.contenedor__todos-productos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    width: 80%;
+    height: 100%;
+    margin: 1rem 10%;
+    background-color: #0000005e;
+    border-radius: 1rem;
+}
+/*
+.producto__botones-admin{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.editar__img-admin, .eliminar__img-admin{
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 100%;
+    cursor: pointer;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.editar__img-admin{
+    background-image: url(/styles/img/edit-icon.svg);
+    background-size: 100% 70%;
+}
+
+.eliminar__img-admin{
+    background-image: url(/styles/img/delete-icon.svg);
+    background-size: 100% 80%;
+}
+
+.editar__img-admin:hover, .eliminar__img-admin:hover{
+    background-color: chartreuse;
+}*/
+/*
+.todos__cabecera{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 1rem;
+    margin: 2rem;
+}
+
+.todos__titulo{
+    font-size: 3rem;
+    font-weight: bold;
+    color: forestgreen;;
+}
+
+.todos__boton{
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 2rem;
+    height: 50%;
+    font-weight: bold;
+    background-color: black;
+    color: chartreuse;
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.todos__boton:hover{
+    background-color: chartreuse;
+    color: black;
+}*/
+/*
+.todos__imagenes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #00000029;
+    border-radius: 1rem;
+    height: 98%;
+    margin: 2rem;
+}
+
+.producto__img-admin{
+    width: 45%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}*/
+/*
+.todos__producto{
+    width: 100%;
+    border-radius: 1rem;
+    margin-top: 2rem;
+}
+
+.producto__detalle{
+    background-color: #000;
+    border-radius: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.detalle__nombre, .detalle__precio, .detalle__descripcion{
+    margin-bottom: 0.5rem;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.detalle__nombre{
+    font-weight: bold;
+    color: chartreuse;
+}*/

@@ -61,9 +61,32 @@ function irASeccion(index) {
   });
 }
 
+// En la página que no es index.html 
 searchButton.addEventListener("click", function () {
-  // obtener el valor del input de búsqueda
-  let nombre = searchBar.value;
-  // llamar a la función buscarItem con el nombre como parámetro
-  buscarItem(nombre);
+  // Obtener la URL de la página actual 
+  let url = window.location.href;
+  // Verificar si la URL termina con index.html 
+  if (url.endsWith("index.html")) {
+    // Si es así, ejecutar la función de búsqueda normalmente 
+    let nombre = searchBar.value;
+    buscarItem(nombre);
+  } else {
+    // Si no, guardar el valor de la barra de búsqueda en sessionStorage 
+    let nombre = searchBar.value;
+    sessionStorage.setItem("busqueda", nombre);
+    // Redirigir a index.html 
+    window.location.href = "index.html";
+  }
+});
+
+// En index.html 
+window.addEventListener("load", function () {
+  // Verificar si hay algún valor guardado en sessionStorage 
+  let nombre = sessionStorage.getItem("busqueda");
+  if (nombre) {
+    // Si hay, ejecutar la función buscarItem con ese valor 
+    buscarItem(nombre);
+    // Borrar el valor de sessionStorage 
+    sessionStorage.removeItem("busqueda");
+  }
 });

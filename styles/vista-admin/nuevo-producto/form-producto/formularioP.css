@@ -1,6 +1,6 @@
 .formulario__producto{
     width: 50%;
-    height: 70vh;
+    height: 35rem;
     font-family: 'Be Vietnam Pro', sans-serif;
     display: flex;
     justify-content: center;
@@ -8,7 +8,7 @@
     flex-direction: column;
 }
 
-.producto__categoria, .producto__nombre, .producto__precio, .producto__agregar{
+.producto__categoria, .producto__nombre, .producto__precio, .producto__descripcion, .producto__agregar{
     margin-top: 2rem;
     width: 100%;
     border: none;
@@ -18,7 +18,7 @@
     font-size: 1.25rem;
 }
 
-.error-categoria, .error-nombre, .error-precio{
+.error-categoria, .error-nombre, .error-precio, .error-descripcion{
     color: #e0e7ef;
     font-size: 1rem;
     margin-top: 1rem;
