@@ -3,6 +3,7 @@ const dropArea = document.querySelector(".dragNdrop__area");
 let dragText = dropArea.querySelector(".producto__mensaje-1");
 let rigthButton = dropArea.querySelector(".producto__boton-1");
 let failButton = dropArea.querySelector(".producto__boton-2");
+let imageData;
 
 // Declarar una variable file que servirá para almacenar el archivo de la imagen que se cargue
 let file;
@@ -47,7 +48,7 @@ dropArea.addEventListener("drop", (event) => {
     // Llamar a la función showFile que mostrará la imagen en el área de arrastrar y soltar
     showFile();
 });
-
+/*
 // Definir la función showFile que recibe el archivo de la imagen y verifica si tiene una extensión válida
 function showFile() {
     // Obtener el tipo de archivo de la imagen y guardarlo en la variable fileType
@@ -75,4 +76,24 @@ function showFile() {
         // Quitar la clase active al elemento dropArea para volver a su estilo original
         dropArea.classList.remove("active");
     }
-}
+}*/
+
+// Modificar la función showFile para asignar la cadena de datos URL a la variable imageData
+function showFile() {
+    let fileType = file.type;
+    let validExtensions = ["image/png", "image/jpeg", "image/jpg"];
+    if (validExtensions.includes(fileType)) {
+      let fileReader = new FileReader();
+      fileReader.onload = () => {
+        let fileURL = fileReader.result;
+        // Asignar la cadena de datos URL a la variable imageData
+        imageData = fileURL;
+        let imgTag = `<img src="${fileURL}" class="producto__img-dropArea">`;
+        dropArea.innerHTML = imgTag;
+      };
+      fileReader.readAsDataURL(file);
+    } else {
+      errorImagen.textContent = "Este archivo no es una imagen";
+      dropArea.classList.remove("active");
+    }
+  }

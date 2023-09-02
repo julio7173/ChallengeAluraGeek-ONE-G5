@@ -28,16 +28,5 @@
 @media only screen and (min-device-width: 320px) and (max-device-width: 768px){ 
     .formulario__producto{
         width: 80%;
-        height: 40vh;
-    }
-    
-    .producto__categoria, .producto__nombre, .producto__precio, .producto__agregar{
-        margin-top: 2rem;
-        width: 100%;
-        border: none;
-        border-radius: 1rem;
-        height: 4rem;
-        padding: 0.5rem;
-        font-size: 1.25rem;
     }
 }

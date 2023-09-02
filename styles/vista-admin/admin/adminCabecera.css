@@ -28,3 +28,16 @@
     background-color: chartreuse;
     color: black;
 }
+
+/* Portrait and Landscape---------- Mobile */
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px){ 
+    .todos__cabecera{
+        flex-direction: column;
+        margin: 1rem;
+        text-align: center;
+    }
+    
+    .todos__boton{
+        margin-top: 1.5rem;
+    }
+}

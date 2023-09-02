@@ -18,3 +18,10 @@
     font-weight: bold;
     color: chartreuse;
 }
+
+/* Portrait and Landscape---------- Mobile */
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px){     
+    .item__verMas {
+        width: 20rem;
+    }
+}

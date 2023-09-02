@@ -39,8 +39,6 @@
 @media only screen and (min-device-width: 320px) and (max-device-width: 768px){ 
     .cabecera__barra-busqueda{
         width: 80%;
-        height: 3rem;
-        
     }
 }
 

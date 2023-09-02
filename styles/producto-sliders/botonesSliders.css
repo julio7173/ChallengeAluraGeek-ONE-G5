@@ -26,3 +26,17 @@
     cursor: pointer;
     transform: translateX(-0.5rem);
 }
+
+/* Portrait and Landscape---------- Mobile */
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px){     
+    .next__item, .prev__item{
+        top: -1.4rem;
+        font-size: 6rem;
+        left: 2rem;
+    }
+    
+    .next__item{
+        left: unset;
+        right: 2rem;
+    }
+}

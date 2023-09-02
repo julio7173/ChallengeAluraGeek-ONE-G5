@@ -15,3 +15,18 @@
     justify-content: space-evenly;
     flex-direction: column;
 }
+
+/* Portrait and Landscape---------- Mobile */
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px){ 
+    .todos__imagenes{
+        flex-direction: column;
+        margin: 0.5rem;
+    }
+    
+    .producto__img-admin{
+        width: 95%;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+}

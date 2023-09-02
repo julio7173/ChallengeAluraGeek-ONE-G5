@@ -42,10 +42,10 @@
             <h2 class="producto__mensaje-1"> Arrastra y suelta para cargar la imagen </h2>
             <span class="producto__mensaje-2"> O </span>
             <button class="producto__boton-1"> Busca la imagen </button>
-            <input type="file" hidden class="producto__boton-2">
+            <input type="file" hidden name="imagen" class="producto__boton-2">
         </div>
         <span class="error-imagen"></span>
-        <script src="/js/productos__agregar/dragNdrop.js"></script>
+        <script src="/js/productos__agregar/dragNdrop.js" defer></script>
         <form class="formulario__producto">
             <input type="text" class="producto__categoria" placeholder="Categoria del producto">
             <span class="error-categoria"></span>
@@ -57,7 +57,7 @@
             <span class="error-descripcion"></span>
             <input type="submit" class="producto__agregar" value="Agregar producto">
         </form>
-        <script src="/js/productos__agregar/formularioAgregar.js"></script>
+        <script src="/js/productos__agregar/formularioAgregar.js" defer></script>
     </section>
     <section class="contenedor__rodapie">
         <div class="rodapie__logo"><img src="/styles/img/logo.png" alt="Logo Luna Park" class="rodapie__img"></div>

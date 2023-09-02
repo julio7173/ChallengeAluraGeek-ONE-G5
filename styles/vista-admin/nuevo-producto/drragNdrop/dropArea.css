@@ -24,10 +24,10 @@
 @media only screen and (min-device-width: 320px) and (max-device-width: 768px){ 
     .dragNdrop__area{
         width: 90%;
-        height: 30vh;
+        height: 18rem;
     }
     
     .upload{
-        width: 15%;
+        width: 20%;
     }
 }

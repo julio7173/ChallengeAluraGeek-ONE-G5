@@ -18,3 +18,18 @@
     border-radius: 1rem;
     cursor: pointer;
 }
+
+/* Portrait and Landscape---------- Mobile */
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px){     
+    .slider__item{
+        position: absolute;
+        width: 500px;
+        left: calc(5%);
+        top: 5rem;
+    }
+    
+    .item__img{
+        width: 70%;
+        height: 16rem;
+    }
+}
