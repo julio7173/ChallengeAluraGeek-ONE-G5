@@ -16,12 +16,12 @@
 }
 
 .editar__img-admin{
-    background-image: url(styles/img/edit-icon.svg);
+    background-image: url("../img/edit-icon.svg");
     background-size: 100% 70%;
 }
 
 .eliminar__img-admin{
-    background-image: url(styles/img/delete-icon.svg);
+    background-image: url("../img/delete-icon.svg");
     background-size: 100% 80%;
 }
 
