@@ -1,9 +1,9 @@
 // Declara una variable imagenes que es un arreglo de cadenas.
 const imagenes = [
-    "/styles/img/banner-promos/p-intro.png",
-    "/styles/img/banner-promos/p-1.png",
-    "/styles/img/banner-promos/p-2.png",
-    "/styles/img/banner-promos/p-3.png"
+    "styles/img/banner-promos/p-intro.png",
+    "styles/img/banner-promos/p-1.png",
+    "styles/img/banner-promos/p-2.png",
+    "styles/img/banner-promos/p-3.png"
 ];
 
 // Declara una variable indiceActual que tiene el valor 0, indica el índice de la imagen que se va a mostrar en el banner.

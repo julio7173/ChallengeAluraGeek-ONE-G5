@@ -32,20 +32,20 @@
         <div class="busqueda">
             <input class="cabecera__barra-busqueda" type="search" id="barraBusqueda" placeholder="Buscar">
             <button id="botonBusqueda"></button>
-            <script src="/js/barraBusqueda.js"></script>
+            <script src="js/barraBusqueda.js"></script>
         </div>
     </header>
     <section class="nuevo__producto">
         <h2 class="producto__titulo"> Agregar nuevo producto </h2>
         <div class="dragNdrop__area">
-            <img src="/styles/img/upload-icon.svg" alt="Upload Icon" class="upload">
+            <img src="styles/img/upload-icon.svg" alt="Upload Icon" class="upload">
             <h2 class="producto__mensaje-1"> Arrastra y suelta para cargar la imagen </h2>
             <span class="producto__mensaje-2"> O </span>
             <button class="producto__boton-1"> Busca la imagen </button>
             <input type="file" hidden name="imagen" class="producto__boton-2">
         </div>
         <span class="error-imagen"></span>
-        <script src="/js/productos__agregar/dragNdrop.js" defer></script>
+        <script src="js/productos__agregar/dragNdrop.js" defer></script>
         <form class="formulario__producto">
             <input type="text" class="producto__categoria" placeholder="Categoria del producto">
             <span class="error-categoria"></span>
@@ -57,10 +57,10 @@
             <span class="error-descripcion"></span>
             <input type="submit" class="producto__agregar" value="Agregar producto">
         </form>
-        <script src="/js/productos__agregar/formularioAgregar.js" defer></script>
+        <script src="js/productos__agregar/formularioAgregar.js" defer></script>
     </section>
     <section class="contenedor__rodapie">
-        <div class="rodapie__logo"><img src="/styles/img/logo.png" alt="Logo Luna Park" class="rodapie__img"></div>
+        <div class="rodapie__logo"><img src="styles/img/logo.png" alt="Logo Luna Park" class="rodapie__img"></div>
         <div class="rodapie__enlaces">
             <a href="#" class="enlace__somos">
                 <p class="quienes__somos"> Quienes somos </p>
@@ -70,13 +70,13 @@
             </a>
         </div>
         <div class="rodapie__formulario">
-            <form class="formulario">
+            <form class="formulario" action="https://formsubmit.co/juliocesarsevericheorellana@gmail.com" method="POST">
                 <h2 class="formulario__titulo"> Hable con nosotros </h2>
                 <input type="text" name="nombre" placeholder="Escribe tu nombre" class="formulario__nombre">
                 <input type="text" name="mesaje" placeholder="Escribe tu mensaje" class="formulario__mensaje">
                 <input type="submit" value="Enviar" class="formulario__boton">
             </form>
-            <script src="/js/formulario.js"></script>
+            <script src="js/formulario.js"></script>
         </div>
     </section>
 </body>

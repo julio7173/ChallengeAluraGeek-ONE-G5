@@ -54,7 +54,7 @@ formularioLogin.addEventListener("submit", function (evento) {
 
   // Si hay una coincidencia, redirigir al menú de administrador
   if (usuario) {
-    window.location.href = "/admin.html";
+    window.location.href = "admin.html";
   } else {
     // Si no hay una coincidencia, mostrar un mensaje de error en el campo de contraseña
     errorPassword.textContent = "Correo o contraseña incorrectos";

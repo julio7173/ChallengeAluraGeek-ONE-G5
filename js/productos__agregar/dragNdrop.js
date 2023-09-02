@@ -48,35 +48,6 @@ dropArea.addEventListener("drop", (event) => {
     // Llamar a la función showFile que mostrará la imagen en el área de arrastrar y soltar
     showFile();
 });
-/*
-// Definir la función showFile que recibe el archivo de la imagen y verifica si tiene una extensión válida
-function showFile() {
-    // Obtener el tipo de archivo de la imagen y guardarlo en la variable fileType
-    let fileType = file.type;
-    // Definir una lista de extensiones válidas para las imágenes
-    let validExtensions = ["image/png", "image/jpeg", "image/jpg"];
-    // Comprobar si el tipo de archivo está incluido en la lista de extensiones válidas
-    if (validExtensions.includes(fileType)) {
-        // Crear un objeto de tipo FileReader que lee el contenido del archivo y lo convierte en una URL
-        let fileReader = new FileReader();
-        // Definir una función que se ejecuta cuando el FileReader termina de leer el archivo
-        fileReader.onload = () => {
-            // Obtener la URL del archivo y guardarla en la variable fileURL
-            let fileURL = fileReader.result;
-            // Crear una etiqueta <img> con la clase producto__img y el atributo src igual a la URL del archivo
-            let imgTag = `<img src="${fileURL}" class="producto__img-dropArea">`;
-            // Insertar la etiqueta <img> en el elemento dropArea, reemplazando su contenido anterior
-            dropArea.innerHTML = imgTag;
-        }
-        // Leer el archivo como una URL usando el FileReader
-        fileReader.readAsDataURL(file);
-    } else {
-        // Mostrar un mensaje de error en el elemento span con la clase errorImagen
-        errorImagen.textContent = "Este archivo no es una imagen";
-        // Quitar la clase active al elemento dropArea para volver a su estilo original
-        dropArea.classList.remove("active");
-    }
-}*/
 
 // Modificar la función showFile para asignar la cadena de datos URL a la variable imageData
 function showFile() {
