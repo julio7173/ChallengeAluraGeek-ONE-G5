@@ -1,4 +1,3 @@
-
 let formulario = document.querySelector(".formulario");
 let nombre = document.querySelector(".formulario__nombre");
 let mensaje = document.querySelector(".formulario__mensaje");
