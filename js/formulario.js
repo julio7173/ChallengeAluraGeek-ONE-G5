@@ -5,18 +5,30 @@ let boton = document.querySelector(".formulario__boton");
 
 // Agregar un evento de submit al formulario
 formulario.addEventListener("submit", function (event) {
-  // Evitar que el formulario se envíe por defecto
   event.preventDefault();
-  // Limpiar los posibles mensajes de error anteriores
   limpiarErrores();
-  // Validar los campos del formulario
   let errores = validarCampos(nombre.value, mensaje.value);
-  // Si hay errores, mostrarlos al usuario
   if (errores.length > 0) {
     mostrarErrores(errores);
   } else {
-    // Si no hay errores, enviar el mensaje
-    enviarMensaje(nombre.value, mensaje.value);
+    // Cambiar el valor del botón a "Enviando..."
+    boton.value = "Enviando...";
+    // Definir el nombre del servicio y el nombre de la plantilla
+    const serviceID = "default_service";
+    const templateID = "template_y1cgwdq";
+    // Enviar el formulario usando emailjs
+    emailjs.sendForm(serviceID, templateID, this)
+      .then(() => {
+        // Restaurar el valor del botón a "Enviar"
+        boton.value = "Enviar";
+        // Mostrar una alerta de éxito
+        alert("¡Enviado!");
+      }, (err) => {
+        // Restaurar el valor del botón a "Enviar"
+        boton.value = "Enviar";
+        // Mostrar una alerta de error
+        alert(JSON.stringify(err));
+      });
   }
 });
 
@@ -62,9 +74,9 @@ function limpiarErrores() {
     formulario.removeChild(ul);
   }
 }
-
+/*
 // Función que muestra una alerta al usuario con el nombre y el mensaje
 function enviarMensaje(nombre, mensaje) {
   // Mostrar una alerta con el nombre y el mensaje
   alert("Tu nombre es " + nombre + " y tu mensaje es " + mensaje + ". Gracias por contactarnos.");
-}
+}*/
