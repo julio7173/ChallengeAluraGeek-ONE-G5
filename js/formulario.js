@@ -74,9 +74,3 @@ function limpiarErrores() {
     formulario.removeChild(ul);
   }
 }
-/*
-// Función que muestra una alerta al usuario con el nombre y el mensaje
-function enviarMensaje(nombre, mensaje) {
-  // Mostrar una alerta con el nombre y el mensaje
-  alert("Tu nombre es " + nombre + " y tu mensaje es " + mensaje + ". Gracias por contactarnos.");
-}*/
