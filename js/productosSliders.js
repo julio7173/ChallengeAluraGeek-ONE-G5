@@ -1,9 +1,9 @@
 let sliders = document.querySelectorAll(".productos__slider");
 let slidersArray = Array.from(sliders);
-let itemsProducts = slidersArray.map(slider => slider.querySelectorAll(".slider__item"));
+let itemsProducts = slidersArray.map(slider => slider.getElementsByClassName("slider__item"));
 let nextItems = document.querySelectorAll(".next__item");
 let prevItems = document.querySelectorAll(".prev__item");
-let activeProducts = [5, 5, 5];
+let activeProducts = [5, 7, 4];
 
 function itemShow(sectionIndex, productIndex) {
     let item = 0;
@@ -45,8 +45,10 @@ nextItems.forEach((nextItem, index) => {
                 ? activeProducts[index] + 1
                 : activeProducts[index];
         itemShow(index, activeProducts[index]);
+        // Agregar esta parte para mostrar u ocultar el detalle según el estado de la sección
         if (detallesVisibles[index]) {
-            verMases[index].forEach((div) => {
+            // Usar Array.from para convertir la colección HTML en un arreglo
+            Array.from(verMases[index]).forEach((div) => {
                 div.style.display = "none";
             });
             verMases[index][activeProducts[index]].style.display = "block";
@@ -59,8 +61,10 @@ prevItems.forEach((prevItem, index) => {
         activeProducts[index] =
             activeProducts[index] - 1 >= 0 ? activeProducts[index] - 1 : activeProducts[index];
         itemShow(index, activeProducts[index]);
+        // Agregar esta parte para mostrar u ocultar el detalle según el estado de la sección
         if (detallesVisibles[index]) {
-            verMases[index].forEach((div) => {
+            // Usar Array.from para convertir la colección HTML en un arreglo
+            Array.from(verMases[index]).forEach((div) => {
                 div.style.display = "none";
             });
             verMases[index][activeProducts[index]].style.display = "block";
@@ -68,23 +72,42 @@ prevItems.forEach((prevItem, index) => {
     };
 });
 
-let sliderImgs = slidersArray.map(slider => slider.querySelectorAll(".item__img"));
-let verMases = slidersArray.map(slider => slider.querySelectorAll(".item__verMas"));
+let sliderImgs = slidersArray.map(slider => slider.getElementsByClassName("item__img"));
+let verMases = slidersArray.map(slider => slider.getElementsByClassName("item__verMas"));
 
+// Volver a usar esta variable como un arreglo
 let detallesVisibles = [false, false, false];
 
-sliderImgs.forEach((sliderImg, sectionIndex) => {
-    sliderImg.forEach((img, imgIndex) => {
-        img.addEventListener("click", (e) => {
-            if (!detallesVisibles[sectionIndex]) {
-                sliders[sectionIndex].style.height = "40rem";
-                verMases[sectionIndex][imgIndex].style.display = "block";
-                detallesVisibles[sectionIndex] = true;
-            } else {
-                sliders[sectionIndex].style.height = "30rem";
-                verMases[sectionIndex][imgIndex].style.display = "none";
-                detallesVisibles[sectionIndex] = false;
-            }
-        });
-    });
-});
+function verDetalle(imagenes, verMases) {
+    // Usar un bucle for tradicional en lugar de un método forEach
+    for (let sectionIndex = 0; sectionIndex < imagenes.length; sectionIndex++) {
+        let sliderImg = imagenes[sectionIndex];
+        // Usar otro bucle for tradicional en lugar de un método forEach
+        for (let imgIndex = 0; imgIndex < sliderImg.length; imgIndex++) {
+            let img = sliderImg[imgIndex];
+            // Usar una variable local para controlar el detalle de cada imagen
+            let detalleVisible = false;
+            // Crear una función para manejar el evento de clic
+            let handleClick = function (e) {
+                if (!detalleVisible) {
+                    sliders[sectionIndex].style.height = "40rem";
+                    verMases[sectionIndex][imgIndex].style.display = "block";
+                    detalleVisible = true;
+                    // Actualizar el estado de la sección en el arreglo
+                    detallesVisibles[sectionIndex] = true;
+                } else {
+                    sliders[sectionIndex].style.height = "30rem";
+                    verMases[sectionIndex][imgIndex].style.display = "none";
+                    detalleVisible = false;
+                    // Actualizar el estado de la sección en el arreglo
+                    detallesVisibles[sectionIndex] = false;
+                }
+            };
+            // Eliminar el evento anterior antes de asignar uno nuevo
+            img.removeEventListener("click", handleClick);
+            img.addEventListener("click", handleClick);
+        }
+    }
+}
+
+verDetalle(sliderImgs, verMases);

@@ -132,7 +132,11 @@ function validarFormulario() {
     };
     let nuevoProductoJSON = JSON.stringify(nuevoProducto);
     localStorage.setItem("nuevoProducto", nuevoProductoJSON);
-    window.location.href = "index.html";
+    let respuesta = confirm("¿Estás seguro de querer enviar el formulario?");
+    if (respuesta) {
+      alert("Formulario enviado correctamente.");
+      window.location.href = "index.html";
+    }
   } else {
     return false;
   }
