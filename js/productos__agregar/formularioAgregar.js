@@ -123,19 +123,28 @@ function validarFormulario() {
   let descripcionValida = validarDescripcion();
   if (imagenValida && categoriaValida && nombreValido && precioValido && descripcionValida) {
     // Usar la variable imageData en lugar de imagen.src
-    let nuevoProducto = {
+    let nuevoProductoIndex = {
       imagen: imageData,
       categoria: categoriaProducto.value,
       nombre: nombreProducto.value,
       precio: precioProducto.value,
       descripcion: descripcionProducto.value,
     };
-    let nuevoProductoJSON = JSON.stringify(nuevoProducto);
-    localStorage.setItem("nuevoProducto", nuevoProductoJSON);
+    let nuevoProductoJSONIndex = JSON.stringify(nuevoProductoIndex);
+    localStorage.setItem("nuevoProductoIndex", nuevoProductoJSONIndex);
+    let nuevoProductoAdmin = {
+      imagen: imageData,
+      categoria: categoriaProducto.value,
+      nombre: nombreProducto.value,
+      precio: precioProducto.value,
+      descripcion: descripcionProducto.value,
+    };
+    let nuevoProductoJSONAdmin = JSON.stringify(nuevoProductoAdmin);
+    localStorage.setItem("nuevoProductoAdmin", nuevoProductoJSONAdmin);
     let respuesta = confirm("¿Estás seguro de querer enviar el formulario?");
     if (respuesta) {
       alert("Formulario enviado correctamente.");
-      window.location.href = "index.html";
+      window.location.href = "admin.html";
     }
   } else {
     return false;
