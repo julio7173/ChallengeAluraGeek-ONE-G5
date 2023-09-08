@@ -58,6 +58,8 @@ let agregarIndex = function () {
   }
 };
 
+let contadorID = 37;
+
 let agregarAdmin = function () {
   let nuevoProductoAdminJSON = localStorage.getItem("nuevoProductoAdmin");
   if (nuevoProductoAdminJSON) {
@@ -94,6 +96,8 @@ let agregarAdmin = function () {
     // Crear los botones de editar y eliminar
     let editarImgAdmin = document.createElement("button");
     editarImgAdmin.classList.add("editar__img-admin");
+    editarImgAdmin.setAttribute("data-id", contadorID + 1);
+    editarImgAdmin.setAttribute("onclick", "editarProducto(this.dataset.id)");
     let eliminarImgAdmin = document.createElement("button");
     eliminarImgAdmin.classList.add("eliminar__img-admin");
     // Agregar los elementos creados al div principal

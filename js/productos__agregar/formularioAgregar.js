@@ -144,7 +144,7 @@ function validarFormulario() {
     let respuesta = confirm("¿Estás seguro de querer enviar el formulario?");
     if (respuesta) {
       alert("Formulario enviado correctamente.");
-      window.location.href = "admin.html";
+      window.location.href = "index.html";
     }
   } else {
     return false;

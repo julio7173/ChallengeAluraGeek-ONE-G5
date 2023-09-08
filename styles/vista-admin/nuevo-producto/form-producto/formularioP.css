@@ -8,7 +8,7 @@
     flex-direction: column;
 }
 
-.producto__categoria, .producto__nombre, .producto__precio, .producto__descripcion, .producto__agregar{
+.producto__categoria, .producto__nombre, .producto__precio, .producto__descripcion, .producto__agregar, .producto__editar{
     margin-top: 2rem;
     width: 100%;
     border: none;
