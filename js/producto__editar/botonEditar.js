@@ -6,6 +6,7 @@ for (let i = 0; i < actionEdit.length; i++) {
     actionEdit[i].addEventListener("click", function () {
         // Redireccionar a nuevoProducto.html con un parámetro edit=true
         window.location.href = "nuevoProducto.html?edit=true";
+        guardarDatos;
     });
 }
 
@@ -17,10 +18,13 @@ window.addEventListener("load", function () {
     // Si el parámetro edit es true, cambiar los estilos
     if (edit === "true") {
         // Seleccionar los botones producto__agregar y producto__editar
+        // Cambiar el título de la página a "Editar producto"
+        let tituloEditar = document.querySelector(".producto__titulo");
         let botonAgregar = document.querySelector(".producto__agregar");
         let botonEditar = document.querySelector(".producto__editar");
         // Cambiar el estilo de display de los botones solo si se presionó editar
         botonAgregar.style.display = "none";
         botonEditar.style.display = "block";
+        tituloEditar.textContent = "Editar producto"
     }
 });
