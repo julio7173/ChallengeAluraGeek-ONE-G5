@@ -69,13 +69,16 @@ function showFile() {
   }
 }
 
-// Esta función verifica si hay una imagen guardada en el localStorage
-function checkImage() {
+// Esta función verifica si hay una imagen guardada en el localStorage y recibe un parámetro edit
+function checkImage(edit) {
   let json = localStorage.getItem("editarProducto");
   if (json) {
     let datos = JSON.parse(json);
     let imagen = datos.imagen; // Esta es la imagen editada
-    showImage(imagen); // Esta función muestra la imagen en el dropArea
+    // Si el parámetro edit es verdadero, muestra la imagen
+    if (edit) {
+      showImage(imagen); // Esta función muestra la imagen en el dropArea
+    }
   }
 }
 
@@ -86,5 +89,13 @@ function showImage(imageData) {
   dropArea.classList.add("active");
 }
 
-// Llama a la función checkImage cuando se carga la página
-window.addEventListener("load", checkImage);
+// Llama a la función checkImage cuando se carga la página y pasa el valor de edit como parámetro
+window.addEventListener("load", function() {
+  // Obtiene el valor de edit de la URL
+  let urlParams = new URLSearchParams(window.location.search);
+  let edit = urlParams.get("edit");
+  // Convierte el valor de edit a un booleano
+  edit = (edit === "true");
+  // Llama a la función checkImage con el valor de edit
+  checkImage(edit);
+});
