@@ -61,6 +61,8 @@ function showFile() {
       imageData = fileURL;
       let imgTag = `<img src="${fileURL}" class="producto__img-dropArea">`;
       dropArea.innerHTML = imgTag;
+      /*dropArea.appendChild(rigthButton, dropArea);*/
+      dropArea.after(rigthButton);
     };
     fileReader.readAsDataURL(file);
   } else {

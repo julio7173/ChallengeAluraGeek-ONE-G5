@@ -1,17 +1,33 @@
-// En el archivo validarNuevoProducto.js
-let json = localStorage.getItem("editarProducto"); // Obtenemos el string del localStorage con la clave "editarProducto"
-let datos = JSON.parse(json); // Convertimos el string a un objeto JavaScript
+// Esta función actualiza los productos con los nuevos datos
+function updateProducts(dataProduct) {
+  // Obtiene el objeto datos del localStorage
+  let json = localStorage.getItem("editarProducto");
+  if (json) {
+    let datos = JSON.parse(json);
+    // Busca el producto con el mismo id que el objeto datos
+    let index = dataProduct.findIndex(product => product.id === datos.id);
+    if (index !== -1) {
+      // Reemplaza el producto con el objeto datos
+      dataProduct[index] = datos;
+    }
+  }
+  return dataProduct;
+}
 
-if (datos) { // Si datos no es nulo
-  let inputCategoria = document.querySelector(".producto__categoria");
-  let inputNombre = document.querySelector(".producto__nombre");
-  let inputPrecio = document.querySelector(".producto__precio");
-  let inputDescripcion = document.querySelector(".producto__descripcion");
-
-  inputCategoria.value = datos.categoria; 
-  inputNombre.value = datos.nombre;
-  inputPrecio.value = datos.precio;
-  inputDescripcion.value = datos.descripcion;
-} else { // Si datos es nulo
-  // Aquí puedes poner algún código para manejar este caso, como mostrar un mensaje de error o redirigir a otra página
+// Esta función genera los productos usando la función map
+function buildList(containerId, sourceProduct) {
+  var container = document.getElementById(containerId);
+  container.innerHTML = "";
+  var html = "";
+  
+  // Actualiza los productos con los nuevos datos
+  this[sourceProduct] = updateProducts(this[sourceProduct]);
+  
+  // Crea un nuevo arreglo con el HTML de cada producto
+  let htmlProducts = this[sourceProduct].map(product => this.buildHtmlProduct(product));
+  
+  // Une el arreglo en una sola cadena HTML
+  html = htmlProducts.join("");
+  
+  container.innerHTML = html;
 }

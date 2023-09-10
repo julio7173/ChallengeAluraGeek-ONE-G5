@@ -1,4 +1,4 @@
-.cabecera__boton{
+.cabecera__sesion, .cabecera__admin, .cabecera__inicio{
     width: 10.5rem;
     height: 3rem;
     border-radius: 5rem;
@@ -7,7 +7,7 @@
     cursor: pointer;
 }
 
-.cabecera__boton:hover{
+.cabecera__sesion:hover, .cabecera__admin:hover, .cabecera__inicio:hover{
     background-color: #f46f52;
     font-weight: bold;
     height: 4rem;
@@ -15,7 +15,7 @@
 
 /* Portrait and Landscape---------- Mobile */
 @media only screen and (min-device-width: 320px) and (max-device-width: 768px){ 
-    .cabecera__boton{
+    .cabecera__sesion, .cabecera__admin, .cabecera__inicio{
         width: 50%;
         height: 3rem;
     }

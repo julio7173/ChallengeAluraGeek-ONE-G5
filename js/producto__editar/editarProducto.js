@@ -20,26 +20,6 @@ window.addEventListener("load", function () {
       tituloEditar.textContent = "Editar producto";
       botonAgregar.style.display = "none";
       botonEditar.style.display = "block";
-      botonEditar.addEventListener("click", guardarProducto);
     }
   }
 });
-
-function guardarProducto(evento) {
-  evento.preventDefault();
-  let imagen = document.querySelector(".dragNdrop__area img").src;
-  let categoria = inputCategoria.value;
-  let nombre = inputNombre.value;
-  let precio = inputPrecio.value;
-  let descripcion = inputDescripcion.value;
-  let datos = {
-    imagen: imagen,
-    categoria: categoria,
-    nombre: nombre,
-    precio: +precio,
-    descripcion: descripcion
-  };
-  let json = JSON.stringify(datos);
-  localStorage.setItem("editarProducto", json);
-  window.location.href = "admin.html";
-}

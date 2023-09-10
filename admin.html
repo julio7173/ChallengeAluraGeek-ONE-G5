@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="styles/cabecera/principal.css">
     <link rel="stylesheet" href="styles/cabecera/logo.css">
     <link rel="stylesheet" href="styles/cabecera/barra.css">
+    <link rel="stylesheet" href="styles/cabecera/boton.css">
     <link rel="stylesheet" href="styles/vista-admin/admin/adminProductos.css">
     <link rel="stylesheet" href="styles/vista-admin/admin/adminCabecera.css">
     <link rel="stylesheet" href="styles/vista-admin/admin/adminCategoria.css">
@@ -36,17 +37,19 @@
             <button id="botonBusqueda"></button>
             <script src="js/barraBusqueda.js"></script>
         </div>
+        <button class="cabecera__inicio" onclick="irInicio(this)" value="index.html"> Inicio </button>
+        <script src="js/botones/botonInicio.js"></script>
     </header>
     <section class="contenedor__todos-productos">
         <div class="todos__cabecera">
             <h2 class="todos__titulo"> Todos los productos </h2>
             <button class="todos__boton" onclick="agregarProducto(this)" value="nuevoProducto.html"> Agregar nuevos
                 productos </button>
-            <script src="js/productos__agregar/agregar.js"></script>
+            <script src="js/botones/botonAgregar.js"></script>
         </div>
         <div class="todos__imagenes">
             <div id="licores">
-                <div class="producto__img-admin">
+                <div class="producto__img-admin" id="licor-1">
                     <img src="styles/img/sliders/licores/1.png" alt="" class="todos__producto">
                     <div class="producto__detalle">
                         <h2 class="detalle__nombre">Johnnie Walker: Blue Label</h2>
@@ -58,7 +61,7 @@
                         <button class="eliminar__img-admin"></button>
                     </div>
                 </div>
-                <div class="producto__img-admin">
+                <div class="producto__img-admin" id="licor-2">
                     <img src="styles/img/sliders/licores/2.png" alt="" class="todos__producto">
                     <div class="producto__detalle">
                         <h2 class="detalle__nombre">Johnnie Walker: Black Label</h2>
@@ -70,7 +73,7 @@
                         <button class="eliminar__img-admin"></button>
                     </div>
                 </div>
-                <div class="producto__img-admin">
+                <div class="producto__img-admin" id="licor-3">
                     <img src="styles/img/sliders/licores/3.png" alt="" class="todos__producto">
                     <div class="producto__detalle">
                         <h2 class="detalle__nombre">Johnnie Walker: Double Label</h2>
@@ -82,7 +85,7 @@
                         <button class="eliminar__img-admin"></button>
                     </div>
                 </div>
-                <div class="producto__img-admin">
+                <div class="producto__img-admin" id="licor-4">
                     <img src="styles/img/sliders/licores/4.png" alt="" class="todos__producto">
                     <div class="producto__detalle">
                         <h2 class="detalle__nombre">Grand Old Parr</h2>
@@ -94,7 +97,7 @@
                         <button class="eliminar__img-admin"></button>
                     </div>
                 </div>
-                <div class="producto__img-admin">
+                <div class="producto__img-admin" id="licor-5">
                     <img src="styles/img/sliders/licores/5.png" alt="" class="todos__producto">
                     <div class="producto__detalle">
                         <h2 class="detalle__nombre">Johnnie Walker: Red Label</h2>
@@ -106,7 +109,7 @@
                         <button class="eliminar__img-admin"></button>
                     </div>
                 </div>
-                <div class="producto__img-admin">
+                <div class="producto__img-admin" id="licor-6">
                     <img src="styles/img/sliders/licores/6.png" alt="" class="todos__producto">
                     <div class="producto__detalle">
                         <h2 class="detalle__nombre">Jack Daniel's</h2>
@@ -118,67 +121,72 @@
                         <button class="eliminar__img-admin"></button>
                     </div>
                 </div>
-                <div class="producto__img-admin">
+                <div class="producto__img-admin" id="licor-7">
                     <img src="styles/img/sliders/licores/7.png" alt="" class="todos__producto">
                     <div class="producto__detalle">
                         <h2 class="detalle__nombre">Flor de Caña</h2>
                         <p class="detalle__precio">270 BS.</p>
-                        <p class="detalle__descripcion">Flor de Caña + Coca-Cola 2L + Cubetera con hielo (recargable) + Tajo de limones (recargable)</p>
+                        <p class="detalle__descripcion">Flor de Caña + Coca-Cola 2L + Cubetera con hielo (recargable) +
+                            Tajo de limones (recargable)</p>
                     </div>
                     <div class="producto__botones-admin">
                         <button class="editar__img-admin"></button>
                         <button class="eliminar__img-admin"></button>
                     </div>
                 </div>
-                <div class="producto__img-admin">
+                <div class="producto__img-admin" id="licor-8">
                     <img src="styles/img/sliders/licores/8.png" alt="" class="todos__producto">
                     <div class="producto__detalle">
                         <h2 class="detalle__nombre">Havana Club</h2>
                         <p class="detalle__precio">400 BS.</p>
-                        <p class="detalle__descripcion">Havana Club + Coca-Cola 2L + Cubetera con hielo (recargable) + Tajo de limones (recargable)</p>
+                        <p class="detalle__descripcion">Havana Club + Coca-Cola 2L + Cubetera con hielo (recargable) +
+                            Tajo de limones (recargable)</p>
                     </div>
                     <div class="producto__botones-admin">
                         <button class="editar__img-admin"></button>
                         <button class="eliminar__img-admin"></button>
                     </div>
                 </div>
-                <div class="producto__img-admin">
+                <div class="producto__img-admin" id="licor-9">
                     <img src="styles/img/sliders/licores/9.png" alt="" class="todos__producto">
                     <div class="producto__detalle">
                         <h2 class="detalle__nombre">Bacardi: Ron Solera</h2>
                         <p class="detalle__precio">350 BS.</p>
-                        <p class="detalle__descripcion">Bacardi Solera + Coca-Cola 2L + Cubetera con hielo (recargable) + Tajo de limones (recargable)</p>
+                        <p class="detalle__descripcion">Bacardi Solera + Coca-Cola 2L + Cubetera con hielo (recargable)
+                            + Tajo de limones (recargable)</p>
                     </div>
                     <div class="producto__botones-admin">
                         <button class="editar__img-admin"></button>
                         <button class="eliminar__img-admin"></button>
                     </div>
                 </div>
-                <div class="producto__img-admin">
+                <div class="producto__img-admin" id="licor-10">
                     <img src="styles/img/sliders/licores/10.png" alt="" class="todos__producto">
                     <div class="producto__detalle">
                         <h2 class="detalle__nombre">Jose Cuervo: Reposado Especial</h2>
                         <p class="detalle__precio">250 BS.</p>
-                        <p class="detalle__descripcion">Tequila + Porción de sal (recargable) + Tajo de limones (recargable)</p>
+                        <p class="detalle__descripcion">Tequila + Porción de sal (recargable) + Tajo de limones
+                            (recargable)</p>
                     </div>
                     <div class="producto__botones-admin">
                         <button class="editar__img-admin"></button>
                         <button class="eliminar__img-admin"></button>
                     </div>
                 </div>
-                <div class="producto__img-admin">
+                <div class="producto__img-admin" id="licor-11">
                     <img src="styles/img/sliders/licores/11.png" alt="" class="todos__producto">
                     <div class="producto__detalle">
                         <h2 class="detalle__nombre">Jose Cuervo: Reposado Especial Silver</h2>
                         <p class="detalle__precio">250 BS.</p>
-                        <p class="detalle__descripcion">Tequila Blanco + Porción de sal (recargable) + Tajo de limones (recargable)</p>
+                        <p class="detalle__descripcion">Tequila Blanco + Porción de sal (recargable) + Tajo de limones
+                            (recargable)</p>
                     </div>
                     <div class="producto__botones-admin">
                         <button class="editar__img-admin"></button>
                         <button class="eliminar__img-admin"></button>
                     </div>
                 </div>
-                <div class="producto__img-admin">
+                <div class="producto__img-admin" id="licor-12">
                     <img src="styles/img/sliders/licores/12.png" alt="" class="todos__producto">
                     <div class="producto__detalle">
                         <h2 class="detalle__nombre">Kohlberg: Tinto Clásico</h2>
@@ -192,7 +200,7 @@
                 </div>
             </div>
             <div id="tragos">
-                <div class="producto__img-admin">
+                <div class="producto__img-admin" id="trago-1">
                     <img src="styles/img/sliders/tragos/22.png" alt="" class="todos__producto">
                     <div class="producto__detalle">
                         <h2 class="detalle__nombre">Pecera: Jarra</h2>
@@ -204,7 +212,7 @@
                         <button class="eliminar__img-admin"></button>
                     </div>
                 </div>
-                <div class="producto__img-admin">
+                <div class="producto__img-admin" id="trago-2">
                     <img src="styles/img/sliders/tragos/23.png" alt="" class="todos__producto">
                     <div class="producto__detalle">
                         <h2 class="detalle__nombre">Mojito: Jarra</h2>
@@ -216,7 +224,7 @@
                         <button class="eliminar__img-admin"></button>
                     </div>
                 </div>
-                <div class="producto__img-admin">
+                <div class="producto__img-admin" id="trago-3">
                     <img src="styles/img/sliders/tragos/24.png" alt="" class="todos__producto">
                     <div class="producto__detalle">
                         <h2 class="detalle__nombre">Daiquiri Fresa: Vaso</h2>
@@ -228,7 +236,7 @@
                         <button class="eliminar__img-admin"></button>
                     </div>
                 </div>
-                <div class="producto__img-admin">
+                <div class="producto__img-admin" id="trago-4">
                     <img src="styles/img/sliders/tragos/25.png" alt="" class="todos__producto">
                     <div class="producto__detalle">
                         <h2 class="detalle__nombre">Daiquiri Maracuya: Vaso</h2>
@@ -240,7 +248,7 @@
                         <button class="eliminar__img-admin"></button>
                     </div>
                 </div>
-                <div class="producto__img-admin">
+                <div class="producto__img-admin" id="trago-5">
                     <img src="styles/img/sliders/tragos/26.png" alt="" class="todos__producto">
                     <div class="producto__detalle">
                         <h2 class="detalle__nombre">La Pitufina: Vaso</h2>
@@ -252,7 +260,7 @@
                         <button class="eliminar__img-admin"></button>
                     </div>
                 </div>
-                <div class="producto__img-admin">
+                <div class="producto__img-admin" id="trago-6">
                     <img src="styles/img/sliders/tragos/27.png" alt="" class="todos__producto">
                     <div class="producto__detalle">
                         <h2 class="detalle__nombre">La Paloma: Vaso</h2>
@@ -264,7 +272,7 @@
                         <button class="eliminar__img-admin"></button>
                     </div>
                 </div>
-                <div class="producto__img-admin">
+                <div class="producto__img-admin" id="trago-7">
                     <img src="styles/img/sliders/tragos/28.png" alt="" class="todos__producto">
                     <div class="producto__detalle">
                         <h2 class="detalle__nombre">Pantera Rosa: Vaso</h2>
@@ -276,7 +284,7 @@
                         <button class="eliminar__img-admin"></button>
                     </div>
                 </div>
-                <div class="producto__img-admin">
+                <div class="producto__img-admin" id="trago-8">
                     <img src="styles/img/sliders/tragos/29.png" alt="" class="todos__producto">
                     <div class="producto__detalle">
                         <h2 class="detalle__nombre">Destornillador: Vaso</h2>
@@ -288,7 +296,7 @@
                         <button class="eliminar__img-admin"></button>
                     </div>
                 </div>
-                <div class="producto__img-admin">
+                <div class="producto__img-admin" id="trago-9">
                     <img src="styles/img/sliders/tragos/30.png" alt="" class="todos__producto">
                     <div class="producto__detalle">
                         <h2 class="detalle__nombre">Blue Lagoon: Vaso</h2>
@@ -300,7 +308,7 @@
                         <button class="eliminar__img-admin"></button>
                     </div>
                 </div>
-                <div class="producto__img-admin">
+                <div class="producto__img-admin" id="trago-10">
                     <img src="styles/img/sliders/tragos/31.png" alt="" class="todos__producto">
                     <div class="producto__detalle">
                         <h2 class="detalle__nombre">Tequila Sunrise: Vaso</h2>
@@ -312,7 +320,7 @@
                         <button class="eliminar__img-admin"></button>
                     </div>
                 </div>
-                <div class="producto__img-admin">
+                <div class="producto__img-admin" id="trago-11">
                     <img src="styles/img/sliders/tragos/32.png" alt="" class="todos__producto">
                     <div class="producto__detalle">
                         <h2 class="detalle__nombre">Mojito Coco: Vaso</h2>
@@ -324,7 +332,7 @@
                         <button class="eliminar__img-admin"></button>
                     </div>
                 </div>
-                <div class="producto__img-admin">
+                <div class="producto__img-admin" id="trago-12">
                     <img src="styles/img/sliders/tragos/33.png" alt="" class="todos__producto">
                     <div class="producto__detalle">
                         <h2 class="detalle__nombre">Sex on the Beach: Vaso</h2>
@@ -336,7 +344,7 @@
                         <button class="eliminar__img-admin"></button>
                     </div>
                 </div>
-                <div class="producto__img-admin">
+                <div class="producto__img-admin" id="trago-13">
                     <img src="styles/img/sliders/tragos/34.png" alt="" class="todos__producto">
                     <div class="producto__detalle">
                         <h2 class="detalle__nombre">Piña Colada: Vaso</h2>
@@ -348,7 +356,7 @@
                         <button class="eliminar__img-admin"></button>
                     </div>
                 </div>
-                <div class="producto__img-admin">
+                <div class="producto__img-admin" id="trago-14">
                     <img src="styles/img/sliders/tragos/35.png" alt="" class="todos__producto">
                     <div class="producto__detalle">
                         <h2 class="detalle__nombre">Orgasmo: Vaso</h2>
@@ -360,7 +368,7 @@
                         <button class="eliminar__img-admin"></button>
                     </div>
                 </div>
-                <div class="producto__img-admin">
+                <div class="producto__img-admin" id="trago-15">
                     <img src="styles/img/sliders/tragos/36.png" alt="" class="todos__producto">
                     <div class="producto__detalle">
                         <h2 class="detalle__nombre">Margarita Corona: Roja</h2>
@@ -372,7 +380,7 @@
                         <button class="eliminar__img-admin"></button>
                     </div>
                 </div>
-                <div class="producto__img-admin">
+                <div class="producto__img-admin" id="trago-16">
                     <img src="styles/img/sliders/tragos/37.png" alt="" class="todos__producto">
                     <div class="producto__detalle">
                         <h2 class="detalle__nombre">Margarita Corona: Azul</h2>
@@ -386,7 +394,7 @@
                 </div>
             </div>
             <div id="refrescos">
-                <div class="producto__img-admin">
+                <div class="producto__img-admin" id="refresco-1">
                     <img src="styles/img/sliders/refrescos/13.png" alt="" class="todos__producto">
                     <div class="producto__detalle">
                         <h2 class="detalle__nombre">Paceña: Macanuda</h2>
@@ -398,7 +406,7 @@
                         <button class="eliminar__img-admin"></button>
                     </div>
                 </div>
-                <div class="producto__img-admin">
+                <div class="producto__img-admin" id="refresco-2">
                     <img src="styles/img/sliders/refrescos/14.png" alt="" class="todos__producto">
                     <div class="producto__detalle">
                         <h2 class="detalle__nombre">Huari</h2>
@@ -410,7 +418,7 @@
                         <button class="eliminar__img-admin"></button>
                     </div>
                 </div>
-                <div class="producto__img-admin">
+                <div class="producto__img-admin" id="refresco-3">
                     <img src="styles/img/sliders/refrescos/15.png" alt="" class="todos__producto">
                     <div class="producto__detalle">
                         <h2 class="detalle__nombre">51 Ice</h2>
@@ -422,7 +430,7 @@
                         <button class="eliminar__img-admin"></button>
                     </div>
                 </div>
-                <div class="producto__img-admin">
+                <div class="producto__img-admin" id="refresco-4">
                     <img src="styles/img/sliders/refrescos/16.png" alt="" class="todos__producto">
                     <div class="producto__detalle">
                         <h2 class="detalle__nombre">Corona</h2>
@@ -434,7 +442,7 @@
                         <button class="eliminar__img-admin"></button>
                     </div>
                 </div>
-                <div class="producto__img-admin">
+                <div class="producto__img-admin" id="refresco-5">
                     <img src="styles/img/sliders/refrescos/17.png" alt="" class="todos__producto">
                     <div class="producto__detalle">
                         <h2 class="detalle__nombre">Coca-Cola: 2L</h2>
@@ -446,7 +454,7 @@
                         <button class="eliminar__img-admin"></button>
                     </div>
                 </div>
-                <div class="producto__img-admin">
+                <div class="producto__img-admin" id="refresco-6">
                     <img src="styles/img/sliders/refrescos/18.png" alt="" class="todos__producto">
                     <div class="producto__detalle">
                         <h2 class="detalle__nombre">Agua Vital: 2L</h2>
@@ -458,7 +466,7 @@
                         <button class="eliminar__img-admin"></button>
                     </div>
                 </div>
-                <div class="producto__img-admin">
+                <div class="producto__img-admin" id="refresco-7">
                     <img src="styles/img/sliders/refrescos/19.png" alt="" class="todos__producto">
                     <div class="producto__detalle">
                         <h2 class="detalle__nombre">Agua Vital: 600mL</h2>
@@ -470,7 +478,7 @@
                         <button class="eliminar__img-admin"></button>
                     </div>
                 </div>
-                <div class="producto__img-admin">
+                <div class="producto__img-admin" id="refresco-8">
                     <img src="styles/img/sliders/refrescos/20.png" alt="" class="todos__producto">
                     <div class="producto__detalle">
                         <h2 class="detalle__nombre">Sprite: 2L</h2>
@@ -482,7 +490,7 @@
                         <button class="eliminar__img-admin"></button>
                     </div>
                 </div>
-                <div class="producto__img-admin">
+                <div class="producto__img-admin" id="refresco-9">
                     <img src="styles/img/sliders/refrescos/21.png" alt="" class="todos__producto">
                     <div class="producto__detalle">
                         <h2 class="detalle__nombre">Red Bull</h2>
@@ -497,8 +505,10 @@
             </div>
         </div>
     </section>
-    <script src="js/productos__agregar/validarNuevoProducto.js"></script>
+    <script src="js/productos__agregar/agregarAdmin.js"></script>
     <script src="js/producto__editar/botonEditar.js"></script>
+    <script src="js/producto-eliminar/botonEliminar.js"></script>
+    <script src="js/producto-eliminar/eliminarProducto.js"></script>
     <section class="contenedor__rodapie">
         <div class="rodapie__logo"><img src="styles/img/logo.png" alt="Logo Luna Park" class="rodapie__img"></div>
         <div class="rodapie__enlaces">
