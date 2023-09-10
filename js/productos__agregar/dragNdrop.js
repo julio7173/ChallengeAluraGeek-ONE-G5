@@ -61,7 +61,6 @@ function showFile() {
       imageData = fileURL;
       let imgTag = `<img src="${fileURL}" class="producto__img-dropArea">`;
       dropArea.innerHTML = imgTag;
-      /*dropArea.appendChild(rigthButton, dropArea);*/
       dropArea.after(rigthButton);
     };
     fileReader.readAsDataURL(file);
@@ -80,6 +79,7 @@ function checkImage(edit) {
     // Si el parámetro edit es verdadero, muestra la imagen
     if (edit) {
       showImage(imagen); // Esta función muestra la imagen en el dropArea
+      dropArea.after(rigthButton);
     }
   }
 }
