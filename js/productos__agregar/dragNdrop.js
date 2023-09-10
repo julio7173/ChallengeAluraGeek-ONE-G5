@@ -68,3 +68,23 @@ function showFile() {
     dropArea.classList.remove("active");
   }
 }
+
+// Esta función verifica si hay una imagen guardada en el localStorage
+function checkImage() {
+  let json = localStorage.getItem("editarProducto");
+  if (json) {
+    let datos = JSON.parse(json);
+    let imagen = datos.imagen; // Esta es la imagen editada
+    showImage(imagen); // Esta función muestra la imagen en el dropArea
+  }
+}
+
+// Esta función muestra la imagen en el dropArea
+function showImage(imageData) {
+  let imgTag = `<img src="${imageData}" class="producto__img-dropArea">`;
+  dropArea.innerHTML = imgTag;
+  dropArea.classList.add("active");
+}
+
+// Llama a la función checkImage cuando se carga la página
+window.addEventListener("load", checkImage);

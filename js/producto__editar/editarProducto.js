@@ -5,6 +5,7 @@ let inputDescripcion = document.querySelector(".producto__descripcion");
 let botonAgregar = document.querySelector(".producto__agregar");
 let botonEditar = document.querySelector(".producto__editar");
 let tituloEditar = document.querySelector(".producto__titulo");
+
 window.addEventListener("load", function () {
   let urlParams = new URLSearchParams(window.location.search);
   let edit = urlParams.get("edit");
@@ -16,7 +17,6 @@ window.addEventListener("load", function () {
       inputNombre.value = datos.nombre;
       inputPrecio.value = datos.precio;
       inputDescripcion.value = datos.descripcion;
-      mostrarImagen(datos.imagen);
       tituloEditar.textContent = "Editar producto";
       botonAgregar.style.display = "none";
       botonEditar.style.display = "block";
@@ -24,11 +24,7 @@ window.addEventListener("load", function () {
     }
   }
 });
-function mostrarImagen(url) {
-  let imagen = document.querySelector(".producto__img-dropArea");
-  imagen.src = url;
-  imagen.alt = "Imagen del producto";
-}
+
 function guardarProducto(evento) {
   evento.preventDefault();
   let imagen = document.querySelector(".dragNdrop__area img").src;

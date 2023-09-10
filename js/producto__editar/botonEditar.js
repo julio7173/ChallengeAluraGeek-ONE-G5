@@ -21,7 +21,7 @@ function editarProducto(evento) {
         precio: +precio.replace(" BS.", ""),
         descripcion: descripcion
     };
-    
+
     let json = JSON.stringify(datos);
     localStorage.setItem("editarProducto", json);
     window.location.href = "nuevoProducto.html?edit=true";
