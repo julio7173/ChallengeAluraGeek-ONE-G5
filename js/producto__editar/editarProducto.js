@@ -1,44 +1,49 @@
-/*// Seleccionamos todos los botones editar__img-admin y les asignamos un evento click
-let botones = document.querySelectorAll(".editar__img-admin");
-botones.forEach(boton => {
-  boton.addEventListener("click", guardarDatos);
-});*/
-
-// Definimos la función guardarDatos que recibe el evento como parámetro
-function guardarDatos(evento) {
-  // Obtenemos el elemento que ha disparado el evento (el botón clicado)
-  let boton = evento.target;
-  // Obtenemos el elemento padre del botón, que es el div producto__img-admin
-  let producto = boton.parentElement;
-  // Obtenemos los elementos hijos del producto que contienen la imagen, el nombre, el precio y la descripción
-  let imagen = producto.querySelector(".todos__producto").src;
-  let nombre = producto.querySelector(".detalle__nombre").textContent;
-  let precio = producto.querySelector(".detalle__precio").textContent;
-  let descripcion = producto.querySelector(".detalle__descripcion").textContent;
-  // Creamos un objeto JavaScript con los datos del producto
-  let datos = {
-    imagen: imagen,
-    nombre: nombre,
-    // Usamos replace para quitar el "BS" del precio y lo convertimos a número
-    precio: +precio.replace(" BS.", ""),
-    descripcion: descripcion
-  };
-  // Convertimos el objeto a una cadena JSON usando JSON.stringify
-  let json = JSON.stringify(datos);
-  // Guardamos la cadena JSON en el localStorage usando el nombre como clave
-  localStorage.setItem(nombre, json);
-  // Opcionalmente, podemos mostrar un mensaje de confirmación al usuario
-  alert("Los datos del producto " + nombre + " se han guardado correctamente.");
-}
-
-// Obtenemos los datos del producto desde el localStorage
-let datos = JSON.parse(localStorage.getItem(nombre));
-
-// Asignamos los valores del producto a los elementos del formulario
+let inputCategoria = document.querySelector(".producto__categoria");
 let inputNombre = document.querySelector(".producto__nombre");
 let inputPrecio = document.querySelector(".producto__precio");
 let inputDescripcion = document.querySelector(".producto__descripcion");
-
-inputNombre.value = datos.nombre;
-inputPrecio.value = datos.precio;
-inputDescripcion.value = datos.descripcion;
+let botonAgregar = document.querySelector(".producto__agregar");
+let botonEditar = document.querySelector(".producto__editar");
+let tituloEditar = document.querySelector(".producto__titulo");
+window.addEventListener("load", function () {
+  let urlParams = new URLSearchParams(window.location.search);
+  let edit = urlParams.get("edit");
+  if (edit === "true") {
+    let json = localStorage.getItem("editarProducto");
+    if (json) {
+      let datos = JSON.parse(json);
+      inputCategoria.value = datos.categoria;
+      inputNombre.value = datos.nombre;
+      inputPrecio.value = datos.precio;
+      inputDescripcion.value = datos.descripcion;
+      mostrarImagen(datos.imagen);
+      tituloEditar.textContent = "Editar producto";
+      botonAgregar.style.display = "none";
+      botonEditar.style.display = "block";
+      botonEditar.addEventListener("click", guardarProducto);
+    }
+  }
+});
+function mostrarImagen(url) {
+  let imagen = document.querySelector(".producto__img-dropArea");
+  imagen.src = url;
+  imagen.alt = "Imagen del producto";
+}
+function guardarProducto(evento) {
+  evento.preventDefault();
+  let imagen = document.querySelector(".dragNdrop__area img").src;
+  let categoria = inputCategoria.value;
+  let nombre = inputNombre.value;
+  let precio = inputPrecio.value;
+  let descripcion = inputDescripcion.value;
+  let datos = {
+    imagen: imagen,
+    categoria: categoria,
+    nombre: nombre,
+    precio: +precio,
+    descripcion: descripcion
+  };
+  let json = JSON.stringify(datos);
+  localStorage.setItem("editarProducto", json);
+  window.location.href = "admin.html";
+}

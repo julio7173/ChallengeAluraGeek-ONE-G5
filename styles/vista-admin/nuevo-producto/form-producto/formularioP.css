@@ -1,7 +1,6 @@
 .formulario__producto{
     width: 50%;
     height: 35rem;
-    font-family: 'Be Vietnam Pro', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,12 +15,18 @@
     height: 4rem;
     padding: 0.5rem;
     font-size: 1.25rem;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+.producto__descripcion{
+    height: 8rem;
 }
 
 .error-categoria, .error-nombre, .error-precio, .error-descripcion{
     color: #e0e7ef;
     font-size: 1rem;
     margin-top: 1rem;
+    font-family: 'Be Vietnam Pro', sans-serif;
 }
 
 /* Portrait and Landscape---------- Mobile */

@@ -1,30 +1,28 @@
-// Seleccionar todos los botones editar__img-admin
-let actionEdit = document.querySelectorAll(".editar__img-admin");
-// Recorrer la lista de botones
-for (let i = 0; i < actionEdit.length; i++) {
-    // Agregar un evento de clic a cada botón
-    actionEdit[i].addEventListener("click", function () {
-        // Redireccionar a nuevoProducto.html con un parámetro edit=true
-        window.location.href = "nuevoProducto.html?edit=true";
-        guardarDatos;
-    });
-}
+let botonesEditar = document.querySelectorAll(".editar__img-admin");
 
-// Agregar una función al evento load de la ventana
-window.addEventListener("load", function () {
-    // Obtener el parámetro edit de la URL
-    let urlParams = new URLSearchParams(window.location.search);
-    let edit = urlParams.get("edit");
-    // Si el parámetro edit es true, cambiar los estilos
-    if (edit === "true") {
-        // Seleccionar los botones producto__agregar y producto__editar
-        // Cambiar el título de la página a "Editar producto"
-        let tituloEditar = document.querySelector(".producto__titulo");
-        let botonAgregar = document.querySelector(".producto__agregar");
-        let botonEditar = document.querySelector(".producto__editar");
-        // Cambiar el estilo de display de los botones solo si se presionó editar
-        botonAgregar.style.display = "none";
-        botonEditar.style.display = "block";
-        tituloEditar.textContent = "Editar producto"
-    }
+botonesEditar.forEach(boton => {
+    boton.addEventListener("click", editarProducto);
 });
+
+function editarProducto(evento) {
+    let btnEdit = evento.target;
+    let producto = btnEdit.closest(".producto__img-admin");
+
+    let imagen = producto.querySelector(".todos__producto").src;
+    let categoria = producto.closest("#licores") ? "licores" : producto.closest("#tragos") ? "tragos" : "refrescos";
+    let nombre = producto.querySelector(".detalle__nombre").textContent;
+    let precio = producto.querySelector(".detalle__precio").textContent;
+    let descripcion = producto.querySelector(".detalle__descripcion").textContent;
+
+    let datos = {
+        imagen: imagen,
+        categoria: categoria,
+        nombre: nombre,
+        precio: +precio.replace(" BS.", ""),
+        descripcion: descripcion
+    };
+    
+    let json = JSON.stringify(datos);
+    localStorage.setItem("editarProducto", json);
+    window.location.href = "nuevoProducto.html?edit=true";
+}

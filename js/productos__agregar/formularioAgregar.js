@@ -57,9 +57,9 @@ function validarNombre() {
     errorNombre.textContent = "El nombre no debe estar vacío";
     // Devolver falso
     return false;
-  } else if (valor.length > 20) {
+  } else if (valor.length > 50) {
     // Si el valor tiene más de 20 caracteres, mostrar el mensaje de error
-    errorNombre.textContent = "El nombre no debe tener más de 20 caracteres";
+    errorNombre.textContent = "El nombre no debe tener más de 50 caracteres";
     // Devolver falso
     return false;
   } else {
